@@ -1,0 +1,29 @@
+name: Linter for active development branches
+
+on:
+  pull_request:
+    paths:
+      - "**"
+
+jobs:
+  # Test with eslint and prettier and try to build the project
+  linter-dev:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Test with eslint and prettier
+        run: yarn run npm-run-all lint-check:*
+
+      - name: Try to build the project
+        run: yarn build
