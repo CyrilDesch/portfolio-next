@@ -1,4 +1,10 @@
+import { useEffect, useLayoutEffect } from "react";
+
 export const AppConfig = {
-  siteName: "todochangeprojectname",
-  author: "It's me Franklin",
+  siteName: "Portfolio",
+  author: "Cyril Deschamps",
 };
+
+export const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
+export default useIsomorphicLayoutEffect;

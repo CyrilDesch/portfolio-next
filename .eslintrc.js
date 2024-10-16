@@ -8,7 +8,6 @@ module.exports = {
   parserOptions: {
     project: "./tsconfig.json",
   },
-  ignorePatterns: ["fixWithTranslateRouteLib.js"],
   plugins: ["@typescript-eslint", "i18next", "deprecation"],
   overrides: [
     {

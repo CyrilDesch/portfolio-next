@@ -1,5 +1,3 @@
-import { isNaN } from "formik";
-
 export function getNumericEnumEntries<
   E extends
     | Record<string | number | symbol, string | number | symbol>
