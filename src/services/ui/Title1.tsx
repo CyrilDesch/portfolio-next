@@ -1,20 +1,25 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import React, { DetailedHTMLProps, HTMLAttributes } from "react";
 
 interface Props
   extends DetailedHTMLProps<
     HTMLAttributes<HTMLHeadingElement>,
     HTMLHeadingElement
-  > {}
+  > {
+  big?: boolean;
+}
 
-const Title1 = ({ className, ...props }: Props): JSX.Element => {
+const Title1 = ({ className, big = false, ...props }: Props): JSX.Element => {
   return (
     <h1
-      {...props}
-      className={classNames(
+      className={twMerge(
+        "font-VarsityTeam leading-8 md:leading-10",
+        big
+          ? "text-4xl lg:text-5xl xl:text-6xl"
+          : "text-3xl lg:text-4xl xl:text-5xl",
         className,
-        "text-3xl lg:text-4xl xl:text-5xl font-VarsityTeam leading-8 md:leading-10",
       )}
+      {...props}
     />
   );
 };

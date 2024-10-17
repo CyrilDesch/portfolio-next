@@ -1,12 +1,20 @@
 {
   "pages": {
-    "home": "Accueil",
+    "home": "Trouvez une destination",
+    "trips_results": "Résultats voyages",
+    "blog": "Blog",
     "contact": "Nous contacter",
     "legal_notice": "Mentions légales",
     "privacy_policy": "Politique de confidentialité"
   },
-  "footer": {
-    "all_rights_reserved": "Tous droits réservés"
+  "header": {
+    "presentation": "Présentation",
+    "projects": "Projets",
+    "job": "Développeur web",
+    "newJob": "Penster junior",
+    "todo": "Trouver un stage en cyber audit"
   },
-  "no_result": "Pas de résultats"
+  "footer": {
+    "phone": "TELEPHONE"
+  }
 }

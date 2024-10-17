@@ -26,5 +26,3 @@ yarn-error.log*
 .parcel-cache
 
 .next
-
-tsconfig.tsbuildinfo

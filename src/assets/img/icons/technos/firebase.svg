@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 351 351"
+   version="1.1"
+   preserveAspectRatio="xMidYMid"
+   id="svg748"
+   sodipodi:docname="firebase.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview750"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.57834758"
+     inkscape:cx="-151.2931"
+     inkscape:cy="185.87438"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg748" />
+  <defs
+     id="defs720">
+    <path
+       d="M1.25273437,280.731641 L2.85834533,277.600858 L102.211177,89.0833546 L58.0613266,5.6082033 C54.3920011,-1.28304578 45.0741245,0.473674398 43.8699203,8.18789086 L1.25273437,280.731641 Z"
+       id="path-1" />
+    <filter
+       x="-0.41601276"
+       y="-0.15030584"
+       width="1.8320255"
+       height="1.3006117"
+       filterUnits="objectBoundingBox"
+       id="filter-2">
+      <feGaussianBlur
+         stdDeviation="17.5"
+         in="SourceAlpha"
+         result="shadowBlurInner1"
+         id="feGaussianBlur701" />
+      <feOffset
+         dx="0"
+         dy="0"
+         in="shadowBlurInner1"
+         result="shadowOffsetInner1"
+         id="feOffset703" />
+      <feComposite
+         in="shadowOffsetInner1"
+         in2="SourceAlpha"
+         operator="arithmetic"
+         k2="-1"
+         k3="1"
+         result="shadowInnerInner1"
+         id="feComposite705" />
+      <feColorMatrix
+         values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0"
+         type="matrix"
+         in="shadowInnerInner1"
+         id="feColorMatrix707" />
+    </filter>
+    <path
+       d="M134.417103,148.974235 L166.455722,116.161738 L134.417104,55.1546874 C131.374828,49.3635911 123.983911,48.7568362 120.973828,54.5646483 L103.26875,88.6738296 L102.739423,90.4175473 L134.417103,148.974235 Z"
+       id="path-3" />
+    <filter
+       x="-0.1318344"
+       y="-0.17669331"
+       width="1.2793634"
+       height="1.2619935"
+       filterUnits="objectBoundingBox"
+       id="filter-4">
+      <feGaussianBlur
+         stdDeviation="3.5"
+         in="SourceAlpha"
+         result="shadowBlurInner1"
+         id="feGaussianBlur711" />
+      <feOffset
+         dx="1"
+         dy="-9"
+         in="shadowBlurInner1"
+         result="shadowOffsetInner1"
+         id="feOffset713" />
+      <feComposite
+         in="shadowOffsetInner1"
+         in2="SourceAlpha"
+         operator="arithmetic"
+         k2="-1"
+         k3="1"
+         result="shadowInnerInner1"
+         id="feComposite715" />
+      <feColorMatrix
+         values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.09 0"
+         type="matrix"
+         in="shadowInnerInner1"
+         id="feColorMatrix717" />
+    </filter>
+  </defs>
+  <g
+     id="g746"
+     transform="translate(47.100266)">
+    <path
+       d="M 0,282.99762 2.1225075,280.0256 102.52736,89.511928 102.73942,87.495132 58.478806,4.3581771 C 54.770627,-2.6060418 44.331303,-0.84524577 43.114348,6.9506547 Z"
+       fill="#ffc24a"
+       id="path722" />
+    <g
+       id="g728">
+      <use
+         fill="#ffa712"
+         fill-rule="evenodd"
+         xlink:href="#path-1"
+         id="use724"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <use
+         fill="#000000"
+         fill-opacity="1"
+         filter="url(#filter-2)"
+         xlink:href="#path-1"
+         id="use726"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+    </g>
+    <path
+       d="M 135.00497,150.3807 167.9602,116.62946 134.99542,53.699311 c -3.12931,-5.956776 -11.8666,-5.97397 -14.9628,0 l -17.61161,33.588774 v 2.860659 z"
+       fill="#f4bd62"
+       id="path730" />
+    <g
+       id="g736">
+      <use
+         fill="#ffa50e"
+         fill-rule="evenodd"
+         xlink:href="#path-3"
+         id="use732"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <use
+         fill="#000000"
+         fill-opacity="1"
+         filter="url(#filter-4)"
+         xlink:href="#path-3"
+         id="use734"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+    </g>
+    <polygon
+       fill="#f6820c"
+       points="0,282.99762 0.96209717,282.0304 4.4577114,280.60956 132.93532,152.60956 134.56303,148.1786 102.51312,87.104858 "
+       id="polygon738" />
+    <path
+       d="M 139.12097,347.55127 255.39592,282.70367 222.1917,78.209337 c -1.03865,-6.398089 -8.88804,-8.927522 -13.46739,-4.3399 L 2.5472637e-4,282.99788 115.60845,347.54554 c 7.30619,4.07944 16.20442,4.08135 23.51252,0.006"
+       fill="#fde068"
+       id="path740" />
+    <path
+       d="M 254.35408,282.15984 221.40194,79.217937 c -1.03077,-6.349518 -7.55815,-8.976982 -12.10273,-4.424187 L 1.2894531,282.60078 115.62783,346.50946 c 7.25072,4.04847 16.0814,4.05037 23.33402,0.006 z"
+       fill="#fcca3f"
+       id="path742" />
+    <path
+       d="m 139.12091,345.64082 c -7.3081,4.07562 -16.20633,4.07371 -23.51252,-0.006 L 0.93134768,282.01455 1.9104478e-4,282.99788 115.60839,347.54554 c 7.30619,4.07944 16.20442,4.08135 23.51252,0.006 l 116.27494,-64.8476 -0.28465,-1.75189 z"
+       fill="#eeab37"
+       id="path744" />
+  </g>
+</svg>
