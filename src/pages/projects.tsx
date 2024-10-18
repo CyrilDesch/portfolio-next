@@ -1,5 +1,4 @@
-import React from "react";
-import SizedSection from "../services/ui/SizedSection";
+import React, { useMemo } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps } from "next";
 import nextI18NextConfig from "../../next-i18next.config";
@@ -8,9 +7,28 @@ import AppLayout from "../services/ui/Layout/AppLayout";
 import BaseSeo from "../services/seo/BaseSeo";
 import { jsonLdScriptProps } from "react-schemaorg";
 import { Organization } from "schema-dts";
+import projectDB from "../assets/projectsDB";
+import ProjectCard from "../services/ui/Portfolio/ProjectCard";
+import realisationsText from "../assets/img/text/realisations.svg";
+import achievementsText from "../assets/img/text/achievements.svg";
+import Image from "next/image";
 
 const Projects = (): JSX.Element => {
-  const { t } = useTranslation(["pages_content", "website"]);
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation(["pages_content", "website"]);
+
+  const textImageLang = useMemo(() => {
+    switch (language) {
+      case "fr":
+        return realisationsText;
+      case "en":
+        return achievementsText;
+      default:
+        return achievementsText;
+    }
+  }, [language]);
 
   return (
     <AppLayout>
@@ -29,13 +47,22 @@ const Projects = (): JSX.Element => {
           })}
         />
       </BaseSeo>
-      <SizedSection
-        className={
-          "flex flex-row z-10 min-h-[23rem] items-start md:min-h-[26rem] justify-center lg:justify-between"
-        }
-      >
-        <p>flops</p>
-      </SizedSection>
+      <div id={"projets"}>
+        <div className={"firstContainer"}>
+          <Image alt={"realisation"} className={"w-full"} src={textImageLang} />
+          <div className={"mt-[-2px]"}>
+            {projectDB.map((item) => (
+              <ProjectCard
+                key={item.title}
+                image={item.image}
+                redirection={item.redirection}
+                title={item.title}
+                typeProject={item.typeProject}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </AppLayout>
   );
 };

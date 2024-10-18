@@ -9,6 +9,7 @@ import nextI18NextConfig from "../../next-i18next.config";
 import { ProvideToast } from "../services/toast-notifications";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { AppConfig } from "../services/utils/AppConfig";
+import SakuraAnimation from "../services/animation/sakura/SakuraAnimation";
 
 const GA_MEASUREMENT_ID = process.env.REACT_APP_GA_MEASUREMENT_ID || "";
 
@@ -40,7 +41,10 @@ const App = ({ Component, pageProps }: AppProps) => {
             strategy={"afterInteractive"}
             trackPageViews
           />
-          <Component {...pageProps} />
+          <SakuraAnimation />
+          <div className={"w-[100vw]"}>
+            <Component {...pageProps} />
+          </div>
         </ProvideToast>
       </div>
     </React.StrictMode>

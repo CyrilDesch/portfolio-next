@@ -4,5 +4,46 @@
 
 @tailwind utilities;
 
-@import "unreset.scss";
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: #7b6d78 white;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7b6d78;
+}
+
+$color_1: black;
+$color_2: white;
+$color_3: #272727;
+$color_4: rgb(0, 0, 0);
+$color_5: #e5dde3;
+$color_6: rgb(70, 70, 70);
+$color_7: #675c65;
+$color_8: rgb(230, 230, 230);
+$font-family_1: "Arial", sans-serif;
+$font-family_2: var(--font-montserrat);
+$background-color_1: white;
+$background-color_2: #867984;
+$background-color_3: #7b6d78;
+$background-color_4: #272727;
+$background-color_5: #e5dde3;
+$background-color_6: #f0e9ee;
+$background-color_7: rgb(230, 230, 230);
+$background-color_8: rgba(0, 0, 0, 0.425);
+$background-color_9: rgba(0, 0, 0, 0.2);
+$gray: #272727;
+$light-gray: rgb(230, 230, 230);
+
+@import "fixedApp.scss";
 @import "initialApp.scss";

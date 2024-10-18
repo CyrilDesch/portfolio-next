@@ -76,8 +76,8 @@ const Header = (): JSX.Element => {
           />
         </div>
         <span className="code">
-          <p>{`public class Cyril {`}</p>
-          <p>{`   public Cyril() {`}</p>
+          <p>{`public class CyrilDeschamps {`}</p>
+          <p>{`   public CyrilDeschamps() {`}</p>
           <p>{`      this.job = "${t("header.job")}";`}</p>
           <p>{`      this.newJob = "${t("header.newJob")}";`}</p>
           <p>{`      if(year == 2025)`}</p>
