@@ -8,14 +8,13 @@ interface Props {
   className?: string;
 }
 
-const AppLayout = ({
-  children,
-  className = "flex flex-col items-center",
-}: Props): JSX.Element => {
+const AppLayout = ({ children, className }: Props): JSX.Element => {
   return (
     <>
       <Header />
-      <main className={twMerge("grow", className)}>{children}</main>
+      <main className={twMerge(className, "layout")}>
+        <div>{children}</div>
+      </main>
       <Footer />
     </>
   );
