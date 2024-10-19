@@ -366,7 +366,7 @@ const SakuraCanvas: React.FC = () => {
       pointFlower.fader = Vector3.create(0.0, 10.0, 0.0);
 
       // paramerters: velocity[3], rotate[3]
-      pointFlower.numFlowers = 800;
+      pointFlower.numFlowers = 500;
       pointFlower.particles = new Array(pointFlower.numFlowers);
       // vertex attributes {position[3], euler_xyz[3], size[1]}
       pointFlower.dataArray = new Float32Array(

@@ -10,21 +10,28 @@ import { Organization } from "schema-dts";
 import Link from "next/link";
 import { PROJECTS_LINK } from "../routes";
 import Image from "next/image";
-
-import iconBacle from "../assets/img/icons/icon-bacle.png";
-import iconPlay from "../assets/img/icons/icon-play.svg";
-import AndroidIcon from "../assets/img/icons/technos/android.svg";
-import CssHtmlIcon from "../assets/img/icons/technos/css_html.svg";
-import FirebaseIcon from "../assets/img/icons/technos/firebase.svg";
-import GitHubIcon from "../assets/img/icons/technos/github.svg";
-import JavascriptIcon from "../assets/img/icons/technos/javascript.svg";
-import NodeJSIcon from "../assets/img/icons/technos/nodeJS.svg";
-import ReactIcon from "../assets/img/icons/technos/react.svg";
-import FlutterIcon from "../assets/img/icons/technos/flutter.svg";
+import { TFuncKey, Trans } from "react-i18next";
 import Competence from "../services/ui/Portfolio/Competence";
 import ValeurCard from "../services/ui/Portfolio/ValeurCard";
+
+import iconArrowUp from "../assets/img/icons/icon-full-arrow-up.svg";
+import iconBacle from "../assets/img/icons/icon-bacle.png";
+import iconJava from "../assets/img/icons/technos/java.svg";
+import iconGit from "../assets/img/icons/technos/git.svg";
+import iconGitHubActions from "../assets/img/icons/technos/github-actions.svg";
+import iconTypescript from "../assets/img/icons/technos/typescript.svg";
+import iconNodeJs from "../assets/img/icons/technos/nodeJS.svg";
+import iconReact from "../assets/img/icons/technos/react.svg";
+import iconAngular from "../assets/img/icons/technos/angular.svg";
+import iconMetasploit from "../assets/img/icons/technos/metasploit.svg";
+import iconBurpsuite from "../assets/img/icons/technos/burpsuite.svg";
+import iconWireshark from "../assets/img/icons/technos/wireshark.svg";
 import textPresentation from "../assets/img/text/presentation.svg";
 import textSelfIntroduction from "../assets/img/text/self-introduction.svg";
+import iconDecouverte from "../assets/img/icons/icon-decouverte.svg";
+import iconCommunication from "../assets/img/icons/icon-communication.svg";
+import iconSearch from "../assets/img/icons/icon-search.svg";
+import iconShield from "../assets/img/icons/icon-shield.svg";
 
 const Home = (): JSX.Element => {
   const {
@@ -60,28 +67,27 @@ const Home = (): JSX.Element => {
           })}
         />
       </BaseSeo>
+      <h1 className={"hidden"}>{t("pages_content:home.page_hide_header")}</h1>
       <div id={"presentation"}>
-        <div className={"firstContainer"}>
+        <section className={"firstContainer"}>
           <div className={"left"}>
             <div>
-              <h1>
-                En quoi je
+              <h2>
+                {t("pages_content:home.services.title_line1")}
                 <br />
-                peux être
-                <br />
-                utile ?
-              </h1>
+                {t("pages_content:home.services.title_line2")}
+              </h2>
               <Link className={"clickable"} href={PROJECTS_LINK}>
-                Mes projets &#10132;
+                {t("pages_content:home.services.projects_link")} &#10132;
               </Link>
             </div>
           </div>
           <div className={"middle"}>
-            <h1>
-              Mon dernier
+            <h3>
+              {t("pages_content:home.last_project.title_line1")}
               <br />
-              projet
-            </h1>
+              {t("pages_content:home.last_project.title_line2")}
+            </h3>
             <a
               className={"buttonPlay clickable"}
               href={"https://www.youtube.com/watch?v=YYRwBxx2GbQ"}
@@ -93,140 +99,187 @@ const Home = (): JSX.Element => {
                 className={"icon-bacle"}
                 src={iconBacle}
               />
-              <Image alt={"icon-play"} className={"icon-play"} src={iconPlay} />
             </a>
-            <p>Bacle</p>
+            <div>
+              <Image
+                alt={"icon-arrow-up"}
+                className={"w-10 h-10 m-auto pb-2"}
+                src={iconArrowUp}
+              />
+              <p>Bacle</p>
+            </div>
           </div>
           <div className={"right"}>
             <div>
-              <h1>Développer</h1>
+              <h3>{t("pages_content:home.developer.title")}</h3>
               <p>
-                {" "}
-                Je suis développeur mobile et web spécialisé en React Native et
-                ReactJS afin créer des applications sur ces plateformes.
+                <Trans
+                  components={{ strong: <strong /> }}
+                  i18nKey={
+                    "pages_content:home.developer.description" as TFuncKey
+                  }
+                />
               </p>
             </div>
             <div>
-              <h1>Conseiller</h1>
+              <h3>{t("pages_content:home.software_engineering.title")}</h3>
               <p>
-                J'accompagne les entreprises dans leur digitalisation en tant
-                que développeur et consultant sur des projets d'applications web
-                et mobiles.
+                <Trans
+                  components={{ strong: <strong /> }}
+                  i18nKey={
+                    "pages_content:home.software_engineering.description" as TFuncKey
+                  }
+                />
               </p>
             </div>
             <div>
-              <h1>Organiser</h1>
+              <h3>{t("pages_content:home.security_audit.title")}</h3>
               <p>
-                J’ai une aspiration certaine pour les méthodes agiles et la
-                communication au sein d'un projet.
+                <Trans
+                  components={{ strong: <strong /> }}
+                  i18nKey={
+                    "pages_content:home.security_audit.description" as TFuncKey
+                  }
+                />
               </p>
             </div>
           </div>
-        </div>
+        </section>
         <div className={"secondContainer"}>
           <Image
-            alt={"text-self-introduction"}
+            alt={"txt-self-introduction"}
             className={"w-full"}
             src={textImageLang}
           />
           <div>
-            <h1>Passionné par l'apprentissage et par la création</h1>
+            <h2>{t("pages_content:home.self_introduction.title")}</h2>
             <p>
-              Je m'appelle Cyril Deschamps. Ayant toujours été autodidacte, très
-              débrouillard et d’une grande ouverture d’esprit, j’ai acquis de
-              nombreuses connaissances dans divers domaines et notamment dans le
-              développement informatique et la création de projet. Par cet
-              apprentissage autodidacte et universitaire, la programmation et
-              l'entrepreneuriat sont devenues mes principales passions. De plus,
-              mes études d’informatiques m’ont beaucoup apporté dans ces deux
-              passions.{" "}
-              <strong>
-                Aujourd’hui, mon rôle est d’accompagner les entreprises dans la
-                réalisation et la maintenance de leur application mobile pour
-                mener à bien leurs projets.
-              </strong>
+              <Trans
+                components={{ strong: <strong />, br: <br /> }}
+                i18nKey={
+                  "pages_content:home.self_introduction.description" as TFuncKey
+                }
+              />
             </p>
           </div>
         </div>
+
         <div className={"thirdContainer"}>
-          <h1>COMPÉTENCES</h1>
-          <h2>TECHNIQUES</h2>
+          <h2>
+            {t("pages_content:home.competences.title")}
+            <span>{t("pages_content:home.competences.subtitle")}</span>
+          </h2>
           <div className={"competencesContainer"}>
             <Competence
-              desc={["○ Maitrise complète", "○ Tout type de projet"]}
-              icon={ReactIcon}
-              title={"React / React Native"}
+              desc={t("pages_content:home.competences.metasploit.desc", {
+                returnObjects: true,
+              })}
+              icon={iconMetasploit}
+              title={t("pages_content:home.competences.metasploit.title")}
             />
             <Competence
-              desc={["○ Maitrise complète", "○ Création d'API"]}
-              icon={NodeJSIcon}
-              title={"NodeJS"}
+              desc={t("pages_content:home.competences.burpsuite.desc", {
+                returnObjects: true,
+              })}
+              icon={iconBurpsuite}
+              title={t("pages_content:home.competences.burpsuite.title")}
             />
             <Competence
-              desc={["○ Maitrise complète"]}
-              icon={JavascriptIcon}
-              title={"Typescript / Javascript"}
+              desc={t("pages_content:home.competences.wireshark.desc", {
+                returnObjects: true,
+              })}
+              icon={iconWireshark}
+              title={t("pages_content:home.competences.wireshark.title")}
             />
             <Competence
-              desc={["○ Maitrise légère"]}
-              icon={FlutterIcon}
-              title={"Flutter"}
+              desc={t("pages_content:home.competences.java.desc", {
+                returnObjects: true,
+              })}
+              icon={iconJava}
+              title={t("pages_content:home.competences.java.title")}
             />
             <Competence
-              desc={["○ Niveau intermédiaire"]}
-              icon={AndroidIcon}
-              title={"Android / Java"}
+              desc={t("pages_content:home.competences.reactjs.desc", {
+                returnObjects: true,
+              })}
+              icon={iconReact}
+              title={t("pages_content:home.competences.reactjs.title")}
             />
             <Competence
-              desc={["○ Maitrise complète"]}
-              icon={CssHtmlIcon}
-              title={"HTML / CSS"}
+              desc={t("pages_content:home.competences.angular.desc", {
+                returnObjects: true,
+              })}
+              icon={iconAngular}
+              title={t("pages_content:home.competences.angular.title")}
             />
             <Competence
-              desc={[
-                "○ Bonne connaissance des outils",
-                "○ Utilisation de Firestore",
-              ]}
-              icon={FirebaseIcon}
-              title={"Firebase"}
+              desc={t("pages_content:home.competences.nodejs.desc", {
+                returnObjects: true,
+              })}
+              icon={iconNodeJs}
+              title={t("pages_content:home.competences.nodejs.title")}
             />
             <Competence
-              desc={["○ Maitrise complète", "○ Indispensable"]}
-              icon={GitHubIcon}
-              title={"GitHub (versioning)"}
+              desc={t("pages_content:home.competences.typescript.desc", {
+                returnObjects: true,
+              })}
+              icon={iconTypescript}
+              title={t("pages_content:home.competences.typescript.title")}
+            />
+            <Competence
+              desc={t("pages_content:home.competences.github_actions.desc", {
+                returnObjects: true,
+              })}
+              icon={iconGitHubActions}
+              title={t("pages_content:home.competences.github_actions.title")}
+            />
+            <Competence
+              desc={t("pages_content:home.competences.git.desc", {
+                returnObjects: true,
+              })}
+              icon={iconGit}
+              title={t("pages_content:home.competences.git.title")}
             />
           </div>
         </div>
         <div className={"fourthContainer"}>
-          <h1>MES VALEURS</h1>
+          <h2>{t("pages_content:home.values_section.title")}</h2>
           <div className={"valeursContainer"}>
             <ValeurCard
-              paragraphe={
-                "Peu importe votre idée et la quantité de travail demandée, c’est avec toute ma bonne volonté que je vous aiderai et vous conseillerai pour mener à bien vos projets."
-              }
-              presetIcon={"succes"}
-              title={"Mon optimisme, mon ambition et mon goût de la réussite"}
+              icon={iconDecouverte}
+              paragraphe={t(
+                "pages_content:home.values_section.continuous_learning.paragraph",
+              )}
+              title={t(
+                "pages_content:home.values_section.continuous_learning.title",
+              )}
             />
             <ValeurCard
-              paragraphe={
-                "La création informatique est ma passion. Le fait de pouvoir créer n'importe quel projet, seul ou à plusieurs, m’a permis de m’épanouir."
-              }
-              presetIcon={"passion"}
-              title={"Je suis passionné"}
+              icon={iconCommunication}
+              paragraphe={t(
+                "pages_content:home.values_section.collaboration_adaptability.paragraph",
+              )}
+              title={t(
+                "pages_content:home.values_section.collaboration_adaptability.title",
+              )}
             />
             <ValeurCard
-              paragraphe={
-                "Ayant toujours été très débrouillard, j’ai appris de nombreuses choses seul et je suis finalement autodidacte. Je ressens le besoin de comprendre tout ce qui m’entoure pour évoluer."
-              }
-              presetIcon={"decouverte"}
-              title={"L'amour de la découverte"}
+              icon={iconSearch}
+              paragraphe={t(
+                "pages_content:home.values_section.curiosity_perseverance.paragraph",
+              )}
+              title={t(
+                "pages_content:home.values_section.curiosity_perseverance.title",
+              )}
             />
             <ValeurCard
-              paragraphe={
-                "Je donne beaucoup d'importance à la communication dans un projet, surtout entre les différentes branches de métiers. Je ferai mon maximum pour cerner totalement le besoin de votre application et répondre à vos demandes."
-              }
-              presetIcon={"communication"}
-              title={"Ne pas se précipiter !"}
+              icon={iconShield}
+              paragraphe={t(
+                "pages_content:home.values_section.quality_security.paragraph",
+              )}
+              title={t(
+                "pages_content:home.values_section.quality_security.title",
+              )}
             />
           </div>
         </div>

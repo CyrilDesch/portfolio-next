@@ -1,6 +1,103 @@
 {
   "home": {
-    "page_title": "Dev & Pentester",
-    "page_description": "Portfolio de Cyril Deschamps, développeur web et pentester junior."
+    "page_title": "Développeur Web Full Stack & Pentester Junior | Cyril Deschamps",
+    "page_description": "Cyril Deschamps, développeur web full-stack avec 2 ans d'expérience, en formation pour devenir pentester junior. Expert en développement d'applications performantes et en sécurité informatique. Basé en France, en étudiant en école d'ingénieurs.",
+    "page_hide_header": "Portfolio de Cyril Deschamps - Développeur Web Full-Stack & Pentester Junior",
+    "services": {
+      "title_line1": "Services web",
+      "title_line2": "et sécurité",
+      "projects_link": "Voir mes projets"
+    },
+    "last_project": {
+      "title_line1": "Mon dernier",
+      "title_line2": "projet"
+    },
+    "developer": {
+      "title": "Développeur",
+      "description": "En tant que développeur full-stack, qualifié en <strong>ReactJS</strong> et <strong>NodeJS</strong>, je développe des applications web performantes et évolutives."
+    },
+    "software_engineering": {
+      "title": "Ingénierie logicielle",
+      "description": "En tant qu'<strong>ingénieur informatique</strong>, je conçois et développe des applications en veillant aux <strong>principes de conception</strong> et des <strong>design patterns</strong>."
+    },
+    "security_audit": {
+      "title": "Audits de sécurité",
+      "description": "En tant que <strong>pentester junior</strong>, je réalise des <strong>audits de sécurité</strong> pour assurer la fiabilité et la protection des applications."
+    },
+    "self_introduction": {
+      "title": "Développeur web en formation en cybersécurité axée pentesting",
+      "description": "Je suis Cyril Deschamps, étudiant en école d’ingénieurs en France, avec une forte expérience en <strong>développement web</strong> et une spécialisation en <strong>audit de sécurité</strong>. J'ai réalisé plusieurs projets web en freelance, dont une plateforme de vente intégrant un paiement sécurisé.<br />Je me forme activement sur <strong>TryHackMe</strong> et <strong>HackTheBox</strong> pour perfectionner mes compétences en pentest (tests d'intrusion) et en sécurité offensive.<br /><strong>Mon objectif est de combiner développement et cybersécurité pour aider les entreprises à sécuriser leurs applications et infrastructures.</strong>"
+    },
+    "competences": {
+      "title": "COMPÉTENCES",
+      "subtitle": "TECHNIQUES",
+      "reactjs": {
+        "title": "ReactJS",
+        "desc": ["○ Maîtrise complète", "○ Applications web"]
+      },
+      "metasploit": {
+        "title": "Metasploit",
+        "desc": ["○ Débutant", "○ Exploitation de vulnérabilités", "○ Pentest"]
+      },
+      "burpsuite": {
+        "title": "Burp Suite",
+        "desc": ["○ Débutant", "○ Tests d'applications web", "○ Pentest"]
+      },
+      "wireshark": {
+        "title": "Wireshark",
+        "desc": ["○ Débutant", "○ Analyse du trafic réseau", "○ SOC et pentest"]
+      },
+      "nodejs": {
+        "title": "NodeJS",
+        "desc": ["○ Bonne maîtrise", "○ API avec ExpressJS ou NestJS"]
+      },
+      "typescript": {
+        "title": "Typescript",
+        "desc": ["○ Maîtrise complète", "○ Applications web", "○ Bibliothèques"]
+      },
+      "java": {
+        "title": "Java",
+        "desc": ["○ Niveau intermédiaire", "○ Principes SOLID"]
+      },
+      "git": {
+        "title": "Git",
+        "desc": [
+          "○ Utilisation quotidienne",
+          "○ Gestion de versions",
+          "○ Gestion des conflits"
+        ]
+      },
+      "github_actions": {
+        "title": "GitHub Actions",
+        "desc": [
+          "○ Niveau intermédiaire",
+          "○ Automatisation CI/CD",
+          "○ CD : Docker et Nginx sur VPS"
+        ]
+      },
+      "angular": {
+        "title": "Angular",
+        "desc": ["○ Niveau intermédiaire", "○ Applications web"]
+      }
+    },
+    "values_section": {
+      "title": "MES VALEURS",
+      "continuous_learning": {
+        "title": "Formation continue et passion pour l'apprentissage",
+        "paragraph": "Passionné par le développement web full-stack et la cybersécurité offensive, je veille à toujours rester à jour en me formant sur des plateformes comme TryHackMe et HackTheBox, afin de renforcer mes compétences en sécurité offensive. La veille technologique est une priorité, et créer un réseau avec des experts dans divers domaines informatiques m’a beaucoup enrichi."
+      },
+      "collaboration_adaptability": {
+        "title": "Collaboration et adaptabilité",
+        "paragraph": "Grâce à mes expériences en freelance, j'ai compris l'importance d'une gestion de projet efficace et d'une communication fluide. Je m'efforce d'apporter des solutions concrètes et adaptées aux besoins spécifiques de chaque client, tout en accordant une attention particulière à la clarté des spécifications visuelles pour une meilleure compréhension des projets."
+      },
+      "curiosity_perseverance": {
+        "title": "Curiosité et persévérance",
+        "paragraph": "Que ce soit en développement web full-stack ou en cybersécurité offensive, je suis déterminé à identifier les vulnérabilités et à proposer des solutions robustes qui protègent les applications et infrastructures. Ma curiosité, moteur de mon apprentissage, me permet de m'adapter rapidement à de nouveaux environnements et constitue un atout majeur dans mes activités de pentesting (tests d'intrusion)."
+      },
+      "quality_security": {
+        "title": "Engagement pour la qualité et la sécurité",
+        "paragraph": "Je m'efforce de proposer des solutions sécurisées et performantes, tout en respectant rigoureusement les meilleures pratiques en matière de développement et d'ingénierie logicielle. Le passage par une phase de conception et de design est essentiel."
+      }
+    }
   }
 }

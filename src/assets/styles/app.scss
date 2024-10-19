@@ -1,3 +1,25 @@
+$color_1: black;
+$color_2: white;
+$color_3: #272727;
+$color_4: rgb(0, 0, 0);
+$color_5: #e5dde3;
+$color_6: rgb(70, 70, 70);
+$color_7: #675c65;
+$color_8: rgb(230, 230, 230);
+$font-family_1: "Arial", sans-serif;
+$font-family_2: var(--font-montserrat);
+$background-color_1: white;
+$background-color_2: #867984;
+$background-color_3: #7b6d78;
+$background-color_4: #272727;
+$background-color_5: #e5dde3;
+$background-color_6: #f0e9ee;
+$background-color_7: rgb(230, 230, 230);
+$background-color_8: rgba(0, 0, 0, 0.425);
+$background-color_9: rgba(0, 0, 0, 0.2);
+$gray: #272727;
+$light-gray: rgb(230, 230, 230);
+
 p,
 h1,
 h2,
@@ -22,7 +44,9 @@ button {
   user-select: none;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-weight: 700;
 }
 
@@ -60,7 +84,7 @@ div#presentation {
       align-items: center;
       padding-bottom: 10px;
 
-      h1 {
+      h2 {
         font-size: 2.5em;
         color: $color_3;
         margin-bottom: 30px;
@@ -115,7 +139,7 @@ div#presentation {
         }
       }
 
-      h1 {
+      h3 {
         font-size: 1.5em;
         line-height: 1.1em;
         text-align: center;
@@ -139,9 +163,12 @@ div#presentation {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 30px;
+      padding-left: 40px;
 
-      h1 {
+      h3 {
+        display: block;
+        width: 300px;
         font-size: 1.5em;
         color: $color_3;
       }
@@ -156,14 +183,14 @@ div#presentation {
 
   .secondContainer {
     position: relative;
-    margin-top: 50px;
+    margin-top: 70px;
 
     div {
       background-color: $background-color_5;
       padding: 60px 80px;
       margin-top: -2px;
 
-      h1 {
+      h2 {
         color: $color_3;
         font-size: 1.5em;
       }
@@ -184,16 +211,63 @@ div#presentation {
     top: 0;
     margin-top: 100px;
 
-    > h1 {
+    > h2 {
       color: $color_3;
       text-align: center;
       font-size: 2.5em;
+
+      > span {
+        display: block;
+        color: $color_7;
+        text-align: center;
+        font-size: 1em;
+        margin-top: -10px;
+      }
     }
-    > h2 {
-      color: $color_7;
-      text-align: center;
-      font-size: 2em;
-      margin-top: -10px;
+
+    .competencesContainer {
+      width: 100%;
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 20px;
+      gap: 20px;
+    }
+
+    .competenceContainer {
+      background: rgba(232, 220, 228, 0.58);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(2.6px);
+      -webkit-backdrop-filter: blur(2.6px);
+      border: 1px solid rgba(232, 220, 228, 0.3);
+      padding: 20px;
+      width: 250px;
+
+      .icon {
+        width: 120px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        aspect-ratio: 1/1;
+      }
+      h3 {
+        font-size: 1.2em;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        font-weight: 500;
+        color: $color_3;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li {
+        font-size: 1em;
+        text-align: center;
+        color: $color_3;
+      }
     }
   }
 
@@ -202,10 +276,53 @@ div#presentation {
     position: relative;
     top: 0;
 
-    > h1 {
+    > h2 {
       color: $color_3;
       text-align: center;
       font-size: 2.5em;
+    }
+
+    .valeursContainer {
+      width: 100%;
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 20px;
+      gap: 20px;
+    }
+
+    .valeurCard {
+      background: rgba(232, 220, 228, 0.58);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(2.6px);
+      -webkit-backdrop-filter: blur(2.6px);
+      border: 1px solid rgba(232, 220, 228, 0.3);
+      padding: 20px;
+      width: 100%;
+
+      .icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+      }
+
+      h3 {
+        width: 100%;
+        max-width: 90%;
+        vertical-align: middle;
+        padding-left: 15px;
+        display: inline-block;
+        color: $color_3;
+        font-size: 1.3em;
+      }
+
+      p {
+        padding-top: 10px;
+        font-size: 1em;
+        text-align: justify;
+      }
     }
   }
 }
@@ -531,16 +648,13 @@ footer {
   #projets {
     .firstContainer {
       > div {
-        grid-template-columns: repeat(
-          1.5,
-          1fr
-        ); // moyenne entre 1 et 2 colonnes
+        grid-template-columns: repeat(1.5, 1fr);
       }
     }
     .projectContainer {
       background-size: cover;
       background-position: 50% 50%;
-      height: 28.5vw; // moyenne entre 35vw et 22vw
+      height: 28.5vw;
       border: solid white 0.05vw;
       cursor: pointer;
     }
@@ -567,7 +681,7 @@ footer {
         width: 100%;
         align-items: start;
 
-        h1 {
+        h2 {
           font-size: 1.5em;
         }
 
