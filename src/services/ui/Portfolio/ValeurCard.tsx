@@ -1,49 +1,18 @@
-import Image from "next/image";
-import iconCommunication from "../../../assets/img/icons/icon-communication.svg";
-import iconDecouverte from "../../../assets/img/icons/icon-decouverte.svg";
-import iconPassion from "../../../assets/img/icons/icon-passion.svg";
-import iconSuccess from "../../../assets/img/icons/icon-success.svg";
+import Image, { StaticImageData } from "next/image";
 
 const ValeurCard = ({
   title,
   paragraphe,
-  presetIcon,
+  icon,
 }: {
   title: string;
   paragraphe: string;
-  presetIcon: string;
+  icon: string | StaticImageData;
 }) => {
   return (
     <div className={"valeurCard"}>
-      {presetIcon === "succes" ? (
-        <Image alt={"icon-success"} className={"icon"} src={iconSuccess} />
-      ) : (
-        false
-      )}
-      {presetIcon === "passion" ? (
-        <Image alt={"icon-passion"} className={"icon"} src={iconPassion} />
-      ) : (
-        false
-      )}
-      {presetIcon === "decouverte" ? (
-        <Image
-          alt={"icon-decouverte"}
-          className={"icon"}
-          src={iconDecouverte}
-        />
-      ) : (
-        false
-      )}
-      {presetIcon === "communication" ? (
-        <Image
-          alt={"icon-communication"}
-          className={"icon"}
-          src={iconCommunication}
-        />
-      ) : (
-        false
-      )}
-      <h1>{title}</h1>
+      <Image alt={"icon"} className={"icon"} src={icon} />
+      <h3>{title}</h3>
       <p>{paragraphe}</p>
     </div>
   );
