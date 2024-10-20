@@ -1,9 +1,13 @@
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
+import { ReactElement } from "react";
 import appIcon from "../../../assets/img/icons/icon-app.svg";
+import useScroll from "../../utils/useScroll";
 
-const Footer = (): JSX.Element => {
+const Footer = (): ReactElement => {
   const { t } = useTranslation(["website"]);
+
+  const { scrollTo } = useScroll();
 
   return (
     <footer>
@@ -15,7 +19,7 @@ const Footer = (): JSX.Element => {
         alt={"icon-app"}
         className={"icon"}
         loading={"eager"}
-        onClick={() => window.open("TODO REMONTER")}
+        onClick={() => scrollTo(0)}
         src={appIcon}
       />
       <p>

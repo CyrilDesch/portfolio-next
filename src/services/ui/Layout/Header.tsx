@@ -13,15 +13,26 @@ import { BASE_LINK, PROJECTS_LINK } from "../../../routes";
 import { GITHUB_LINK, LINKEDIN_LINK } from "../../../routes/external";
 import useScroll from "../../utils/useScroll";
 
-const Header = (): JSX.Element => {
-  const { t } = useTranslation("website");
-  const { pathname } = useRouter();
+import iconFrenchFlag from "../../../assets/img/icons/icon-french.svg";
+import iconEnglishFlag from "../../../assets/img/icons/icon-english.svg";
+import { ReactElement } from "react";
 
-  useTxtRotate();
+const Header = (): ReactElement => {
+  const { t, i18n } = useTranslation("website");
+  const router = useRouter();
+
+  useTxtRotate(`// ${t("header.todo")}`);
   const { scrollTo, isScrolled } = useScroll();
 
+  function switchLanguage() {
+    const { pathname, query, asPath } = router;
+    router.push({ pathname, query }, asPath, {
+      locale: i18n.language === "fr" ? "en" : "fr",
+    });
+  }
+
   return (
-    <header>
+    <header id="header">
       <div className={"left"}>
         <nav>
           <ul className={"menu"}>
@@ -30,13 +41,13 @@ const Header = (): JSX.Element => {
             </li>
             <li className={"menuContainer"}>
               <Link
-                className={pathname === BASE_LINK ? "active" : ""}
+                className={router.pathname === BASE_LINK ? "active" : ""}
                 href={BASE_LINK}
               >
                 {t("header.presentation")}
               </Link>
               <Link
-                className={pathname === PROJECTS_LINK ? "active" : ""}
+                className={router.pathname === PROJECTS_LINK ? "active" : ""}
                 href={PROJECTS_LINK}
               >
                 {t("header.projects")}
@@ -74,6 +85,24 @@ const Header = (): JSX.Element => {
             target={"_blank"}
             url={LINKEDIN_LINK}
           />
+          <div
+            className="bg-white p-4 rounded-full w-[50px] h-[50px] cursor-pointer"
+            onClick={switchLanguage}
+          >
+            {i18n.language === "fr" ? (
+              <Image
+                alt={"icon-english"}
+                className={"w-full"}
+                src={iconEnglishFlag}
+              />
+            ) : (
+              <Image
+                alt={"icon-french"}
+                className={"w-full"}
+                src={iconFrenchFlag}
+              />
+            )}
+          </div>
         </div>
         <span className="code">
           <p>{`public class CyrilDeschamps {`}</p>
@@ -84,11 +113,7 @@ const Header = (): JSX.Element => {
           <p>{`         // TODO :`}</p>
           <p>
             {"         "}
-            <span
-              className="txt-rotate"
-              data-period="2000"
-              data-rotate={`["// ${t("header.todo")}"]`}
-            />
+            <span className="txt-rotate" data-period="2000" />
           </p>
           <p>{`   }`}</p>
           <p>{`}`}</p>

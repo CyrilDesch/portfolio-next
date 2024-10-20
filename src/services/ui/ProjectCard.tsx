@@ -1,5 +1,32 @@
 import Image, { StaticImageData } from "next/image";
-import iconClick from "../../../assets/img/icons/icon-click.png";
+import { twMerge } from "tailwind-merge";
+import iconClick from "../../assets/img/icons/icon-click.png";
+
+const LinkIfRedirection = ({
+  redirection,
+  children,
+}: {
+  redirection: string | null;
+  children: React.ReactNode;
+}) => {
+  return redirection !== null ? (
+    <a
+      className={twMerge(
+        "projectContainer",
+        redirection ? "cursor-pointer" : "cursor-not-allowed",
+      )}
+      href={redirection}
+      rel={"noreferrer"}
+      target={"_blank"}
+    >
+      {children}
+    </a>
+  ) : (
+    <div className={twMerge("projectContainer", "cursor-not-allowed")}>
+      {children}
+    </div>
+  );
+};
 
 const ProjectCard = ({
   title,
@@ -13,12 +40,7 @@ const ProjectCard = ({
   typeProject: string;
 }) => {
   return (
-    <a
-      className={"projectContainer"}
-      href={redirection ?? "#"}
-      rel={"noreferrer"}
-      target={"_blank"}
-    >
+    <LinkIfRedirection redirection={redirection}>
       <div>
         <p className={"title"}>{title.toUpperCase()}</p>
         <p className={"typeProject"}>
@@ -34,7 +56,7 @@ const ProjectCard = ({
         )}
       </div>
       <Image alt={"Project Image"} className={"backgroundImage"} src={image} />
-    </a>
+    </LinkIfRedirection>
   );
 };
 

@@ -1,12 +1,4 @@
 {
-  "pages": {
-    "home": "Find a destination",
-    "trips_results": "Trips results",
-    "blog": "Blog",
-    "contact": "Contact us",
-    "legal_notice": "Legal notice",
-    "privacy_policy": "Privacy policy"
-  },
   "header": {
     "presentation": "Presentation",
     "projects": "Projects",
@@ -16,5 +8,9 @@
   },
   "footer": {
     "phone": "PHONE"
+  },
+  "not-found": {
+    "title": "404? Oops, wrong turn!",
+    "message": "It seems this page is lost in the void, but I'm here! Why not explore more about me instead?"
   }
 }

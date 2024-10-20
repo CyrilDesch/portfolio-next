@@ -4,8 +4,22 @@ import healven from "./img/healven.jpg";
 import portfolio from "./img/portfolio.jpg";
 import ruckfield from "./img/ruckfield.jpg";
 import foodyril from "./img/foodyril.jpg";
+import qrcodeLib from "./img/qrcode-lib.jpg";
+import orgatrips from "./img/orgatrips.jpg";
 
 const tabProject = [
+  {
+    title: "Custom Qrcode Browser",
+    redirection: "https://github.com/CyrilDesch/custom-qrcode-browser",
+    image: qrcodeLib,
+    typeProject: "library",
+  },
+  {
+    title: "Orgatrips",
+    redirection: "https://orgatrips.cyrildeschamps.fr",
+    image: orgatrips,
+    typeProject: "website",
+  },
   {
     title: "Bacle",
     redirection: "https://www.youtube.com/watch?v=YYRwBxx2GbQ&t=119s",
@@ -13,34 +27,34 @@ const tabProject = [
     typeProject: "app",
   },
   {
-    title: "Application de Finance",
+    title: "Test finance app",
     redirection: "https://github.com/CyrilDesch/FinanceAppDesign",
     image: appFinance,
-    typeProject: "app",
+    typeProject: "mobile app",
   },
   {
     title: "Healven",
     redirection: "https://github.com/CyrilDesch/HealvenApp",
     image: healven,
-    typeProject: "app",
+    typeProject: "mobile app",
   },
   {
-    title: "PortfolioV1",
+    title: "Old portfolio",
     redirection: "https://github.com/CyrilDesch/PortfolioV1",
     image: portfolio,
-    typeProject: "site",
+    typeProject: "website",
   },
   {
     title: "RuckField",
     redirection: null,
     image: ruckfield,
-    typeProject: "site",
+    typeProject: "website",
   },
   {
     title: "FoodYril",
     redirection: "https://github.com/CyrilDesch/FoodYril-Ancienne-Version",
     image: foodyril,
-    typeProject: "app",
+    typeProject: "mobile app",
   },
 ];
 
