@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { ReactElement, useMemo } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps } from "next";
 import nextI18NextConfig from "../../next-i18next.config";
@@ -11,11 +11,10 @@ import Link from "next/link";
 import { PROJECTS_LINK } from "../routes";
 import Image from "next/image";
 import { TFuncKey, Trans } from "react-i18next";
-import Competence from "../services/ui/Portfolio/Competence";
-import ValeurCard from "../services/ui/Portfolio/ValeurCard";
-
+import Competence from "../services/ui/Competence";
+import ValeurCard from "../services/ui/ValeurCard";
 import iconArrowUp from "../assets/img/icons/icon-full-arrow-up.svg";
-import iconBacle from "../assets/img/icons/icon-bacle.png";
+import iconOrgatrips from "../assets/img/icons/icon-orgatrips.png";
 import iconJava from "../assets/img/icons/technos/java.svg";
 import iconGit from "../assets/img/icons/technos/git.svg";
 import iconGitHubActions from "../assets/img/icons/technos/github-actions.svg";
@@ -33,7 +32,7 @@ import iconCommunication from "../assets/img/icons/icon-communication.svg";
 import iconSearch from "../assets/img/icons/icon-search.svg";
 import iconShield from "../assets/img/icons/icon-shield.svg";
 
-const Home = (): JSX.Element => {
+const Home = (): ReactElement => {
   const {
     t,
     i18n: { language },
@@ -69,7 +68,7 @@ const Home = (): JSX.Element => {
       </BaseSeo>
       <h1 className={"hidden"}>{t("pages_content:home.page_hide_header")}</h1>
       <div id={"presentation"}>
-        <section className={"firstContainer"}>
+        <section id={"firstContainer"}>
           <div className={"left"}>
             <div>
               <h2>
@@ -90,14 +89,14 @@ const Home = (): JSX.Element => {
             </h3>
             <a
               className={"buttonPlay clickable"}
-              href={"https://www.youtube.com/watch?v=YYRwBxx2GbQ"}
+              href={"https://orgatrips.cyrildeschamps.fr"}
               rel={"noreferrer"}
               target={"_blank"}
             >
               <Image
                 alt={"image-project"}
-                className={"icon-bacle"}
-                src={iconBacle}
+                className={"icon-project"}
+                src={iconOrgatrips}
               />
             </a>
             <div>
@@ -106,7 +105,7 @@ const Home = (): JSX.Element => {
                 className={"w-10 h-10 m-auto pb-2"}
                 src={iconArrowUp}
               />
-              <p>Bacle</p>
+              <p>Orgatrips</p>
             </div>
           </div>
           <div className={"right"}>
@@ -145,7 +144,7 @@ const Home = (): JSX.Element => {
             </div>
           </div>
         </section>
-        <div className={"secondContainer"}>
+        <section id={"secondContainer"}>
           <Image
             alt={"txt-self-introduction"}
             className={"w-full"}
@@ -162,9 +161,8 @@ const Home = (): JSX.Element => {
               />
             </p>
           </div>
-        </div>
-
-        <div className={"thirdContainer"}>
+        </section>
+        <section id={"thirdContainer"}>
           <h2>
             {t("pages_content:home.competences.title")}
             <span>{t("pages_content:home.competences.subtitle")}</span>
@@ -241,8 +239,8 @@ const Home = (): JSX.Element => {
               title={t("pages_content:home.competences.git.title")}
             />
           </div>
-        </div>
-        <div className={"fourthContainer"}>
+        </section>
+        <section id={"fourthContainer"}>
           <h2>{t("pages_content:home.values_section.title")}</h2>
           <div className={"valeursContainer"}>
             <ValeurCard
@@ -282,7 +280,7 @@ const Home = (): JSX.Element => {
               )}
             />
           </div>
-        </div>
+        </section>
       </div>
     </AppLayout>
   );

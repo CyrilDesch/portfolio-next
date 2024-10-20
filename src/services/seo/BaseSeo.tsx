@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React, { ReactNode } from "react";
+import React, { ReactElement, ReactNode } from "react";
 import { jsonLdScriptProps } from "react-schemaorg";
 import { WebPage } from "schema-dts";
 import { AppConfig } from "../utils/AppConfig";
@@ -19,7 +19,7 @@ const BaseSeo = ({
   description,
   children,
   noIndex = false,
-}: BaseSeoProps): JSX.Element => {
+}: BaseSeoProps): ReactElement => {
   const { pathname, query } = useRouter();
 
   const queryString = Object.entries(query)

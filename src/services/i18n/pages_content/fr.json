@@ -1,7 +1,7 @@
 {
   "home": {
     "page_title": "Développeur Web Full Stack & Pentester Junior | Cyril Deschamps",
-    "page_description": "Cyril Deschamps, développeur web full-stack avec 2 ans d'expérience, en formation pour devenir pentester junior. Expert en développement d'applications performantes et en sécurité informatique. Basé en France, en étudiant en école d'ingénieurs.",
+    "page_description": "Cyril Deschamps, développeur web full-stack avec 2 ans d'expérience, en formation pour devenir pentester junior. Expert en développement d'applications performantes et en sécurité informatique. Basé en France, étudiant en école d'ingénieurs.",
     "page_hide_header": "Portfolio de Cyril Deschamps - Développeur Web Full-Stack & Pentester Junior",
     "services": {
       "title_line1": "Services web",
@@ -26,7 +26,7 @@
     },
     "self_introduction": {
       "title": "Développeur web en formation en cybersécurité axée pentesting",
-      "description": "Je suis Cyril Deschamps, étudiant en école d’ingénieurs en France, avec une forte expérience en <strong>développement web</strong> et une spécialisation en <strong>audit de sécurité</strong>. J'ai réalisé plusieurs projets web en freelance, dont une plateforme de vente intégrant un paiement sécurisé.<br />Je me forme activement sur <strong>TryHackMe</strong> et <strong>HackTheBox</strong> pour perfectionner mes compétences en pentest (tests d'intrusion) et en sécurité offensive.<br /><strong>Mon objectif est de combiner développement et cybersécurité pour aider les entreprises à sécuriser leurs applications et infrastructures.</strong>"
+      "description": "Je suis Cyril Deschamps, étudiant en école d’ingénieurs en France, avec une forte expérience en <strong>développement web</strong> et une spécialisation en <strong>audit de sécurité</strong>. J'ai réalisé plusieurs projets web en freelance, dont une plateforme de vente intégrant un paiement sécurisé. Je me forme activement sur <strong>TryHackMe</strong> et <strong>HackTheBox</strong> pour perfectionner mes compétences en pentest (tests d'intrusion) et en sécurité offensive.<br /><strong>Mon objectif est de combiner développement et cybersécurité pour aider les entreprises à sécuriser leurs applications et infrastructures.</strong>"
     },
     "competences": {
       "title": "COMPÉTENCES",

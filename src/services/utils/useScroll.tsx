@@ -9,10 +9,10 @@ interface UseScrollResult {
 const useScroll = (): UseScrollResult => {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const scrollTo = (x: number) => {
+  const scrollTo = (y: number) => {
     window.scrollTo({
       top: 0,
-      left: x,
+      left: y,
       behavior: "smooth",
     });
   };

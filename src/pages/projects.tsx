@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { ReactElement, useMemo } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps } from "next";
 import nextI18NextConfig from "../../next-i18next.config";
@@ -8,12 +8,12 @@ import BaseSeo from "../services/seo/BaseSeo";
 import { jsonLdScriptProps } from "react-schemaorg";
 import { Organization } from "schema-dts";
 import projectDB from "../assets/projectsDB";
-import ProjectCard from "../services/ui/Portfolio/ProjectCard";
+import ProjectCard from "../services/ui/ProjectCard";
 import realisationsText from "../assets/img/text/realisations.svg";
 import achievementsText from "../assets/img/text/achievements.svg";
 import Image from "next/image";
 
-const Projects = (): JSX.Element => {
+const Projects = (): ReactElement => {
   const {
     t,
     i18n: { language },
@@ -48,7 +48,7 @@ const Projects = (): JSX.Element => {
         />
       </BaseSeo>
       <div id={"projets"}>
-        <div className={"firstContainer"}>
+        <section id={"firstContainer"}>
           <Image alt={"realisation"} className={"w-full"} src={textImageLang} />
           <div className={"mt-[-2px]"}>
             {projectDB.map((item) => (
@@ -61,7 +61,7 @@ const Projects = (): JSX.Element => {
               />
             ))}
           </div>
-        </div>
+        </section>
       </div>
     </AppLayout>
   );

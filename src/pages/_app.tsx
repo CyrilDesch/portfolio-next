@@ -1,4 +1,5 @@
 import "../assets/styles/global.scss";
+import "lenis/dist/lenis.css";
 import { AppProps } from "next/app";
 import React from "react";
 import { appWithTranslation } from "next-i18next";
@@ -6,7 +7,6 @@ import { twMerge } from "tailwind-merge";
 import Head from "next/head";
 import { Montserrat } from "next/font/google";
 import nextI18NextConfig from "../../next-i18next.config";
-import { ProvideToast } from "../services/toast-notifications";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { AppConfig } from "../services/utils/AppConfig";
 import SakuraAnimation from "../services/animation/sakura/SakuraAnimation";
@@ -35,17 +35,15 @@ const App = ({ Component, pageProps }: AppProps) => {
           "flex flex-col w-full min-h-screen p-0 m-0 bg-appBgColor overflow-x-hidden",
         )}
       >
-        <ProvideToast>
-          <GoogleAnalytics
-            gaMeasurementId={GA_MEASUREMENT_ID}
-            strategy={"afterInteractive"}
-            trackPageViews
-          />
-          <SakuraAnimation />
-          <div className={"w-[100vw]"}>
-            <Component {...pageProps} />
-          </div>
-        </ProvideToast>
+        <GoogleAnalytics
+          gaMeasurementId={GA_MEASUREMENT_ID}
+          strategy={"afterInteractive"}
+          trackPageViews
+        />
+        <SakuraAnimation />
+        <div className={"w-[100vw]"}>
+          <Component {...pageProps} />
+        </div>
       </div>
     </React.StrictMode>
   );

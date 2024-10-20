@@ -1,20 +1,18 @@
 {
-  "pages": {
-    "home": "Trouvez une destination",
-    "trips_results": "Résultats voyages",
-    "blog": "Blog",
-    "contact": "Nous contacter",
-    "legal_notice": "Mentions légales",
-    "privacy_policy": "Politique de confidentialité"
-  },
   "header": {
     "presentation": "Présentation",
     "projects": "Projets",
     "job": "Développeur web",
-    "newJob": "Penster junior",
+    "newJob": "Pentester junior",
     "todo": "Trouver un stage en cyber audit"
   },
   "footer": {
     "phone": "TELEPHONE"
+  },
+  "not-found": {
+    "not-found": {
+      "title": "404 ? Oups, mauvaise direction !",
+      "message": "On dirait que cette page s'est perdue, mais moi je suis bien là ! Pourquoi ne pas en profiter pour en savoir plus sur moi ?"
+    }
   }
 }
