@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "prepare": "husky install",
-    "build": "docker build -t dev-portfolio-next .",
-    "prod": "docker run -p 4000:80 -t dev-portfolio-next",
+    "build": "next build",
+    "prod": "docker build -t dev-portfolio-next . && docker run -p 4000:80 -t dev-portfolio-next",
     "postbuild": "next-sitemap",
     "start": "next dev",
     "build-stats": "cross-env ANALYZE=true npm run build",
