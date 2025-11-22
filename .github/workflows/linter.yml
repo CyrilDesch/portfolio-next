@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - "**"
+  push:
+    branches:
+      - development
 
 jobs:
   # Test with eslint and prettier
