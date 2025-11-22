@@ -89,7 +89,7 @@ const Home = (): ReactElement => {
             </h3>
             <a
               className={"buttonPlay clickable"}
-              href={"https://orgatrips.cyrildeschamps.fr"}
+              href={"https://github.com/Cyril-Deschamps/orgatrips-front"}
               rel={"noreferrer"}
               target={"_blank"}
             >

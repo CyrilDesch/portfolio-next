@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-next
+  labels:
+    app: portfolio-next
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portfolio-next
+  template:
+    metadata:
+      labels:
+        app: portfolio-next
+    spec:
+      containers:
+        - name: portfolio-next
+          image: ghcr.io/cyrildesch/portfolio-next-example:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NODE_ENV
+              value: production
