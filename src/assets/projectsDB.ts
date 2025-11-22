@@ -9,49 +9,49 @@ import orgatrips from "./img/orgatrips.jpg";
 
 const tabProject = [
   {
-    title: "Custom Qrcode Browser",
+    title: "Custom Qrcode Browser - 2024",
     redirection: "https://github.com/CyrilDesch/custom-qrcode-browser",
     image: qrcodeLib,
     typeProject: "library",
   },
   {
-    title: "Orgatrips",
-    redirection: "https://orgatrips.cyrildeschamps.fr",
+    title: "Orgatrips - 2023",
+    redirection: "https://github.com/Cyril-Deschamps/orgatrips-front",
     image: orgatrips,
     typeProject: "website",
   },
   {
-    title: "Bacle",
+    title: "Bacle - 2022",
     redirection: "https://www.youtube.com/watch?v=YYRwBxx2GbQ&t=119s",
     image: bacle,
     typeProject: "app",
   },
   {
-    title: "Test finance app",
+    title: "Finance app design Flutter - 2022",
     redirection: "https://github.com/CyrilDesch/FinanceAppDesign",
     image: appFinance,
     typeProject: "mobile app",
   },
   {
-    title: "Healven",
+    title: "Healven - 2020",
     redirection: "https://github.com/CyrilDesch/HealvenApp",
     image: healven,
     typeProject: "mobile app",
   },
   {
-    title: "Old portfolio",
+    title: "Old portfolio - 2021",
     redirection: "https://github.com/CyrilDesch/PortfolioV1",
     image: portfolio,
     typeProject: "website",
   },
   {
-    title: "RuckField",
+    title: "RuckField - 2021",
     redirection: null,
     image: ruckfield,
     typeProject: "website",
   },
   {
-    title: "FoodYril",
+    title: "FoodYril - 2018",
     redirection: "https://github.com/CyrilDesch/FoodYril-Ancienne-Version",
     image: foodyril,
     typeProject: "mobile app",

@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-next
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+        - name: portfolio-next
+          image: ghcr.io/cyrildesch/portfolio-next:production
