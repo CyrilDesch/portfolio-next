@@ -25,7 +25,7 @@ spec:
               value: production
           readinessProbe:
             httpGet:
-              path: /
+              path: /api/healthz
               port: 80
             initialDelaySeconds: 10
             periodSeconds: 5
@@ -34,7 +34,7 @@ spec:
             failureThreshold: 3
           livenessProbe:
             httpGet:
-              path: /
+              path: /api/healthz
               port: 80
             initialDelaySeconds: 30
             periodSeconds: 10
