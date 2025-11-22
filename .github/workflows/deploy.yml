@@ -106,7 +106,7 @@ jobs:
 
           # Commit if there are changes
           if ! git diff --staged --quiet; then
-            git commit -m "chore(release): update ${OVERLAY} image tag to ${IMAGE_TAG} [skip ci]"
+            git commit -m "chore: update ${OVERLAY} image tag to ${IMAGE_TAG} [skip ci]"
           fi
 
           # Tag the commit
