@@ -9,5 +9,5 @@ patches:
 - path: ingress-patch.yaml
 images:
 - name: ghcr.io/cyrildesch/portfolio-next
-  newName: ghcr.io/CyrilDesch/portfolio-next
-  newTag: sha-112c48f
+  newName: ghcr.io/cyrildesch/portfolio-next
+  newTag: sha-c5a2cc5
