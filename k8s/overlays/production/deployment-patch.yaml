@@ -8,5 +8,4 @@ spec:
     spec:
       containers:
         - name: portfolio-next
-          image: ghcr.io/cyrildesch/portfolio-next:prod
-
+          image: ghcr.io/cyrildesch/portfolio-next:production

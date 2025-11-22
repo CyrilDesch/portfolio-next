@@ -1,19 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: portfolio-next-prod
+  name: portfolio-next-production
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/CyrilDesch/portfolio-next.git
-    targetRevision: production
-    path: k8s/overlays/prod
+    targetRevision: deploy-production
+    path: k8s/overlays/production
   destination:
     server: https://kubernetes.default.svc
-    namespace: portfolio-prod
+    namespace: portfolio-production
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-
+    syncOptions:
+      - CreateNamespace=true
