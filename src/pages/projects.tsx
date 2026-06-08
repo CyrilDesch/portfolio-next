@@ -1,8 +1,8 @@
 import React, { ReactElement, useMemo } from "react";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import type { GetStaticProps } from "next";
 import nextI18NextConfig from "../../next-i18next.config";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import AppLayout from "../services/ui/Layout/AppLayout";
 import BaseSeo from "../services/seo/BaseSeo";
 import { jsonLdScriptProps } from "react-schemaorg";

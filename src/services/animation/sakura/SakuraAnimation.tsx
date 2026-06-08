@@ -904,7 +904,7 @@ const SakuraCanvas: React.FC = () => {
       canvas.height = window.innerHeight;
     }
 
-    window.addEventListener("load", function (e) {
+    var initSakura = function () {
       var canvas = document.getElementById("sakura");
       try {
         makeCanvasFullScreen(canvas);
@@ -914,7 +914,6 @@ const SakuraCanvas: React.FC = () => {
         console.error(e);
         return;
       }
-        
 
       window.addEventListener("resize", onResize);
 
@@ -925,7 +924,7 @@ const SakuraCanvas: React.FC = () => {
       timeInfo.start = new Date();
       timeInfo.prev = timeInfo.start;
       animate();
-    });
+    };
 
     //set window.requestAnimationFrame
     (function (w, r) {
@@ -941,7 +940,7 @@ const SakuraCanvas: React.FC = () => {
     })(window, "equestAnimationFrame");`,
         }}
         id={"module"}
-        strategy={"beforeInteractive"}
+        strategy={"afterInteractive"}
       />
       <Script
         dangerouslySetInnerHTML={{
@@ -1037,7 +1036,7 @@ const SakuraCanvas: React.FC = () => {
     }`,
         }}
         id={"sakura_point_vsh"}
-        strategy={"beforeInteractive"}
+        strategy={"afterInteractive"}
         type={"vert"}
       />
       <Script
@@ -1114,7 +1113,7 @@ const SakuraCanvas: React.FC = () => {
     }`,
         }}
         id={"sakura_point_fsh"}
-        strategy={"beforeInteractive"}
+        strategy={"afterInteractive"}
         type={"frag"}
       />
       <Script
@@ -1133,7 +1132,7 @@ const SakuraCanvas: React.FC = () => {
     }`,
         }}
         id={"fx_common_vsh"}
-        strategy={"beforeInteractive"}
+        strategy={"afterInteractive"}
         type={"vert"}
       />
       <Script
@@ -1158,7 +1157,7 @@ const SakuraCanvas: React.FC = () => {
     }`,
         }}
         id={"bg_fsh"}
-        strategy={"beforeInteractive"}
+        strategy={"afterInteractive"}
         type={"frag"}
       />
       <Script
@@ -1179,7 +1178,7 @@ const SakuraCanvas: React.FC = () => {
     }`,
         }}
         id={"fx_brightbuf_fsh"}
-        strategy={"beforeInteractive"}
+        strategy={"afterInteractive"}
         type={"frag"}
       />
       <Script
@@ -1205,7 +1204,7 @@ const SakuraCanvas: React.FC = () => {
     }`,
         }}
         id={"fx_dirblur_r4_fsh"}
-        strategy={"beforeInteractive"}
+        strategy={"afterInteractive"}
         type={"frag"}
       />
       <Script
@@ -1225,7 +1224,7 @@ const SakuraCanvas: React.FC = () => {
     }`,
         }}
         id={"fx_common_fsh"}
-        strategy={"beforeInteractive"}
+        strategy={"afterInteractive"}
         type={"frag"}
       />
       <Script
@@ -1241,7 +1240,7 @@ const SakuraCanvas: React.FC = () => {
     }`,
         }}
         id={"pp_final_vsh"}
-        strategy={"beforeInteractive"}
+        strategy={"afterInteractive"}
         type={"vert"}
       />
       <Script
@@ -1268,8 +1267,13 @@ const SakuraCanvas: React.FC = () => {
     }`,
         }}
         id={"pp_final_fsh"}
-        strategy={"beforeInteractive"}
+        strategy={"afterInteractive"}
         type={"frag"}
+      />
+      <Script
+        id={"sakura-init"}
+        strategy={"afterInteractive"}
+        dangerouslySetInnerHTML={{ __html: `window.initSakura && window.initSakura();` }}
       />
     </>
   );

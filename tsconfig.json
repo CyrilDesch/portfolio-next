@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -10,13 +14,11 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "baseUrl": ".",
-    "downlevelIteration": true,
+    "jsx": "react-jsx",
     "importHelpers": true,
     "strictFunctionTypes": false,
     "strictNullChecks": true,
@@ -24,7 +26,7 @@
   },
   "include": [
     "src",
-    ".eslintrc.js",
+    "eslint.config.js",
     "next-env.d.ts",
     "postcss.config.js",
     "tailwind.config.js",
@@ -33,5 +35,7 @@
     "commitlint.config.cjs",
     "next-sitemap.config.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

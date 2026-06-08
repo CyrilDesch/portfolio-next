@@ -9,10 +9,14 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   output: 'standalone',
+  turbopack: {
+    root: __dirname,
+  },
   reactStrictMode: true,
   i18n,
   sassOptions: {
     fiber: false,
+    silenceDeprecations: ['import'],
   },
   images: {
     remotePatterns: [

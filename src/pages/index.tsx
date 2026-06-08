@@ -1,8 +1,8 @@
 import React, { ReactElement, useMemo } from "react";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import type { GetStaticProps } from "next";
 import nextI18NextConfig from "../../next-i18next.config";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import AppLayout from "../services/ui/Layout/AppLayout";
 import BaseSeo from "../services/seo/BaseSeo";
 import { jsonLdScriptProps } from "react-schemaorg";
@@ -10,7 +10,7 @@ import { Organization } from "schema-dts";
 import Link from "next/link";
 import { PROJECTS_LINK } from "../routes";
 import Image from "next/image";
-import { TFuncKey, Trans } from "react-i18next";
+import { Trans } from "react-i18next";
 import Competence from "../services/ui/Competence";
 import ValeurCard from "../services/ui/ValeurCard";
 import iconArrowUp from "../assets/img/icons/icon-full-arrow-up.svg";
@@ -114,9 +114,7 @@ const Home = (): ReactElement => {
               <p>
                 <Trans
                   components={{ strong: <strong /> }}
-                  i18nKey={
-                    "pages_content:home.developer.description" as TFuncKey
-                  }
+                  i18nKey={"pages_content:home.developer.description"}
                 />
               </p>
             </div>
@@ -126,7 +124,7 @@ const Home = (): ReactElement => {
                 <Trans
                   components={{ strong: <strong /> }}
                   i18nKey={
-                    "pages_content:home.software_engineering.description" as TFuncKey
+                    "pages_content:home.software_engineering.description"
                   }
                 />
               </p>
@@ -136,9 +134,7 @@ const Home = (): ReactElement => {
               <p>
                 <Trans
                   components={{ strong: <strong /> }}
-                  i18nKey={
-                    "pages_content:home.security_audit.description" as TFuncKey
-                  }
+                  i18nKey={"pages_content:home.security_audit.description"}
                 />
               </p>
             </div>
@@ -155,9 +151,7 @@ const Home = (): ReactElement => {
             <p>
               <Trans
                 components={{ strong: <strong />, br: <br /> }}
-                i18nKey={
-                  "pages_content:home.self_introduction.description" as TFuncKey
-                }
+                i18nKey={"pages_content:home.self_introduction.description"}
               />
             </p>
           </div>
@@ -169,72 +163,92 @@ const Home = (): ReactElement => {
           </h2>
           <div className={"competencesContainer"}>
             <Competence
-              desc={t("pages_content:home.competences.metasploit.desc", {
-                returnObjects: true,
-              })}
+              desc={
+                t("pages_content:home.competences.metasploit.desc", {
+                  returnObjects: true,
+                }) as string[]
+              }
               icon={iconMetasploit}
               title={t("pages_content:home.competences.metasploit.title")}
             />
             <Competence
-              desc={t("pages_content:home.competences.burpsuite.desc", {
-                returnObjects: true,
-              })}
+              desc={
+                t("pages_content:home.competences.burpsuite.desc", {
+                  returnObjects: true,
+                }) as string[]
+              }
               icon={iconBurpsuite}
               title={t("pages_content:home.competences.burpsuite.title")}
             />
             <Competence
-              desc={t("pages_content:home.competences.wireshark.desc", {
-                returnObjects: true,
-              })}
+              desc={
+                t("pages_content:home.competences.wireshark.desc", {
+                  returnObjects: true,
+                }) as string[]
+              }
               icon={iconWireshark}
               title={t("pages_content:home.competences.wireshark.title")}
             />
             <Competence
-              desc={t("pages_content:home.competences.java.desc", {
-                returnObjects: true,
-              })}
+              desc={
+                t("pages_content:home.competences.java.desc", {
+                  returnObjects: true,
+                }) as string[]
+              }
               icon={iconJava}
               title={t("pages_content:home.competences.java.title")}
             />
             <Competence
-              desc={t("pages_content:home.competences.reactjs.desc", {
-                returnObjects: true,
-              })}
+              desc={
+                t("pages_content:home.competences.reactjs.desc", {
+                  returnObjects: true,
+                }) as string[]
+              }
               icon={iconReact}
               title={t("pages_content:home.competences.reactjs.title")}
             />
             <Competence
-              desc={t("pages_content:home.competences.angular.desc", {
-                returnObjects: true,
-              })}
+              desc={
+                t("pages_content:home.competences.angular.desc", {
+                  returnObjects: true,
+                }) as string[]
+              }
               icon={iconAngular}
               title={t("pages_content:home.competences.angular.title")}
             />
             <Competence
-              desc={t("pages_content:home.competences.nodejs.desc", {
-                returnObjects: true,
-              })}
+              desc={
+                t("pages_content:home.competences.nodejs.desc", {
+                  returnObjects: true,
+                }) as string[]
+              }
               icon={iconNodeJs}
               title={t("pages_content:home.competences.nodejs.title")}
             />
             <Competence
-              desc={t("pages_content:home.competences.typescript.desc", {
-                returnObjects: true,
-              })}
+              desc={
+                t("pages_content:home.competences.typescript.desc", {
+                  returnObjects: true,
+                }) as string[]
+              }
               icon={iconTypescript}
               title={t("pages_content:home.competences.typescript.title")}
             />
             <Competence
-              desc={t("pages_content:home.competences.github_actions.desc", {
-                returnObjects: true,
-              })}
+              desc={
+                t("pages_content:home.competences.github_actions.desc", {
+                  returnObjects: true,
+                }) as string[]
+              }
               icon={iconGitHubActions}
               title={t("pages_content:home.competences.github_actions.title")}
             />
             <Competence
-              desc={t("pages_content:home.competences.git.desc", {
-                returnObjects: true,
-              })}
+              desc={
+                t("pages_content:home.competences.git.desc", {
+                  returnObjects: true,
+                }) as string[]
+              }
               icon={iconGit}
               title={t("pages_content:home.competences.git.title")}
             />

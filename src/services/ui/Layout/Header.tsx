@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
-import { slide as Menu } from "react-burger-menu";
 import appIcon from "../../../assets/img/icons/icon-app.svg";
 import burgerMenuIcon from "../../../assets/img/icons/icon-burger.svg";
 import arrowUpIcon from "../../../assets/img/icons/icon-arrow-up.svg";
@@ -12,14 +11,15 @@ import useTxtRotate from "../../utils/useTxtRotate";
 import { BASE_LINK, PROJECTS_LINK } from "../../../routes";
 import { GITHUB_LINK, LINKEDIN_LINK } from "../../../routes/external";
 import useScroll from "../../utils/useScroll";
+import { ReactElement, useState } from "react";
 
 import iconFrenchFlag from "../../../assets/img/icons/icon-french.svg";
 import iconEnglishFlag from "../../../assets/img/icons/icon-english.svg";
-import { ReactElement } from "react";
 
 const Header = (): ReactElement => {
   const { t, i18n } = useTranslation("website");
   const router = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useTxtRotate(`// ${t("header.todo")}`);
   const { scrollTo, isScrolled } = useScroll();
@@ -54,20 +54,20 @@ const Header = (): ReactElement => {
               </Link>
             </li>
             <li>
-              <Menu
-                customBurgerIcon={
-                  <Image alt={"icon-menu"} src={burgerMenuIcon} />
-                }
-                styles={burgerMenuStyle}
-                right
+              <button
+                aria-label="Open menu"
+                onClick={() => setMenuOpen(true)}
+                style={{
+                  width: 40,
+                  height: 40,
+                  position: "relative",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                }}
               >
-                <a className={"menu-item"} href={BASE_LINK}>
-                  Présentation
-                </a>
-                <a className={"menu-item"} href={PROJECTS_LINK}>
-                  Projets
-                </a>
-              </Menu>
+                <Image alt={"icon-menu"} src={burgerMenuIcon} />
+              </button>
             </li>
           </ul>
         </nav>
@@ -86,20 +86,22 @@ const Header = (): ReactElement => {
             url={LINKEDIN_LINK}
           />
           <div
-            className="bg-white p-4 rounded-full w-[50px] h-[50px] cursor-pointer"
+            className="bg-white rounded-full w-[50px] h-[50px] cursor-pointer flex items-center justify-center"
             onClick={switchLanguage}
           >
             {i18n.language === "fr" ? (
               <Image
                 alt={"icon-english"}
-                className={"w-full"}
+                height={22}
                 src={iconEnglishFlag}
+                width={22}
               />
             ) : (
               <Image
                 alt={"icon-french"}
-                className={"w-full"}
+                height={22}
                 src={iconFrenchFlag}
+                width={22}
               />
             )}
           </div>
@@ -130,51 +132,72 @@ const Header = (): ReactElement => {
           src={arrowUpIcon}
         />
       ) : null}
+
+      {/* Mobile slide-in menu */}
+      {menuOpen && (
+        <div
+          aria-hidden="true"
+          onClick={() => setMenuOpen(false)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0, 0, 0, 0.3)",
+            zIndex: 1000,
+          }}
+        />
+      )}
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          right: menuOpen ? 0 : "-320px",
+          width: 300,
+          height: "100vh",
+          background: "#3e3444",
+          zIndex: 1001,
+          transition: "right 0.3s ease",
+          padding: "2.5em 1.5em 0",
+          fontSize: "1.15em",
+        }}
+      >
+        <button
+          aria-label="Close menu"
+          onClick={() => setMenuOpen(false)}
+          style={{
+            position: "absolute",
+            top: 20,
+            left: 20,
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            color: "#bdc3c7",
+            fontSize: "1.2em",
+          }}
+        >
+          ✕
+        </button>
+        <a
+          href={BASE_LINK}
+          onClick={() => setMenuOpen(false)}
+          style={{
+            display: "block",
+            paddingBottom: "0.8em",
+            paddingTop: "2em",
+            color: "#b8b7ad",
+          }}
+        >
+          Présentation
+        </a>
+        <a
+          href={PROJECTS_LINK}
+          onClick={() => setMenuOpen(false)}
+          style={{ display: "block", paddingBottom: "0.8em", color: "#b8b7ad" }}
+        >
+          Projets
+        </a>
+      </div>
     </header>
   );
-};
-
-const burgerMenuStyle = {
-  bmBurgerButton: {
-    width: "40px",
-    height: "40px",
-    position: "relative",
-  },
-  bmCrossButton: {
-    left: "20px",
-    top: "20px",
-  },
-  bmCross: {
-    background: "#bdc3c7",
-  },
-  bmMenuWrap: {
-    position: "fixed",
-    height: "100vh",
-    top: "0",
-  },
-  bmMenu: {
-    background: "#3e3444",
-    padding: "2.5em 1.5em 0",
-    fontSize: "1.15em",
-  },
-  bmMorphShape: {
-    fill: "#e5dde3",
-  },
-  bmItemList: {
-    color: "#b8b7ad",
-    padding: "0.8em",
-  },
-  bmItem: {
-    display: "block",
-    paddingBottom: "0.8em",
-  },
-  bmOverlay: {
-    background: "rgba(0, 0, 0, 0.3)",
-    width: "100vw",
-    height: "100vh",
-    top: "0",
-    left: "0",
-  },
 };
 
 export default Header;

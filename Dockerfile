@@ -1,15 +1,14 @@
 # Install dependencies only when needed
-FROM node:18-alpine AS deps
+FROM oven/bun:1-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Install dependencies based on yarn
-COPY package.json yarn.lock* ./
-RUN yarn install --frozen-lockfile
+COPY package.json bun.lockb* ./
+RUN bun install --frozen-lockfile
 
 
 # Rebuild the source code only when needed
-FROM node:18-alpine AS builder
+FROM oven/bun:1-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -17,7 +16,7 @@ COPY . .
 ARG REACT_APP_HOST
 ARG REACT_APP_GA_MEASUREMENT_ID
 
-RUN yarn build
+RUN bun run build
 
 
 # Production image, copy all the files and run next
