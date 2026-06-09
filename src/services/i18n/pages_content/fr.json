@@ -34,11 +34,19 @@
       "subtitle": "TECHNIQUES",
       "scala": {
         "title": "Scala",
-        "desc": ["○ Niveau avancé", "○ App backend & API REST", "○ Typelevel, ZIO and KYO"]
+        "desc": [
+          "○ Niveau avancé",
+          "○ App backend & API REST",
+          "○ Typelevel, ZIO and KYO"
+        ]
       },
       "nodejs": {
         "title": "NodeJS",
-        "desc": ["○ Bonne maîtrise", "○ API avec NestJS ou Express", "○ REST & WebSocket"]
+        "desc": [
+          "○ Bonne maîtrise",
+          "○ API avec NestJS ou Express",
+          "○ REST & WebSocket"
+        ]
       },
       "typescript": {
         "title": "Typescript",
@@ -92,9 +100,7 @@
           "industry": "Industrie spatiale",
           "role": "Ingénieur Logiciel — Stage",
           "date": "2024",
-          "bullets": [
-            "Refonte complète de l'application de gestion de tests"
-          ]
+          "bullets": ["Refonte complète de l'application de gestion de tests"]
         },
         {
           "company": "Cyril Deschamps · SimplX · Pluricité",
@@ -123,9 +129,7 @@
           "degree": "DUT Informatique",
           "field": "",
           "date": "2020 – 2022",
-          "bullets": [
-            "Formation généraliste en informatique"
-          ]
+          "bullets": ["Formation généraliste en informatique"]
         }
       ]
     }

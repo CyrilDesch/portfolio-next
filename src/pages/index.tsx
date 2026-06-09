@@ -71,7 +71,8 @@ const Home = (): ReactElement => {
                 {t("pages_content:home.services.title_line3")}
               </h2>
               <Link className={"clickable"} href={PROJECTS_LINK}>
-                {t("pages_content:home.services.projects_link")}&nbsp;&nbsp;&#10132;
+                {t("pages_content:home.services.projects_link")}
+                &nbsp;&nbsp;&#10132;
               </Link>
             </div>
           </div>

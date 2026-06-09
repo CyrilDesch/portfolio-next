@@ -22,10 +22,7 @@ class MyDocument extends Document {
             sizes={"16x16"}
             type={"image/png"}
           />
-          <link
-            href={`/assets/site.webmanifest`}
-            rel={"manifest"}
-          />
+          <link href={`/assets/site.webmanifest`} rel={"manifest"} />
           <link
             color={"#5bbad5"}
             href={`/assets/safari-pinned-tab.svg`}

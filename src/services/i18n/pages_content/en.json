@@ -34,11 +34,19 @@
       "subtitle": "TECHNICAL",
       "scala": {
         "title": "Scala",
-        "desc": ["○ Advanced level", "○ Backend & REST APIs", "○ JVM ecosystem (Tapir, Quarkus)"]
+        "desc": [
+          "○ Advanced level",
+          "○ Backend & REST APIs",
+          "○ JVM ecosystem (Tapir, Quarkus)"
+        ]
       },
       "nodejs": {
         "title": "NodeJS",
-        "desc": ["○ Good mastery", "○ APIs with NestJS or Express", "○ REST & WebSocket"]
+        "desc": [
+          "○ Good mastery",
+          "○ APIs with NestJS or Express",
+          "○ REST & WebSocket"
+        ]
       },
       "typescript": {
         "title": "Typescript",
@@ -88,9 +96,7 @@
           "industry": "Space industry",
           "role": "Software Engineer — Internship",
           "date": "2024",
-          "bullets": [
-            "Full rewrite of the test management application"
-          ]
+          "bullets": ["Full rewrite of the test management application"]
         },
         {
           "company": "Cyril Deschamps · SimplX · Pluricité",
@@ -119,9 +125,7 @@
           "degree": "DUT Computer Science",
           "field": "",
           "date": "2020 – 2022",
-          "bullets": [
-            "General computer science curriculum"
-          ]
+          "bullets": ["General computer science curriculum"]
         }
       ]
     }

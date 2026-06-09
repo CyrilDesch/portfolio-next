@@ -1271,7 +1271,9 @@ const SakuraCanvas: React.FC = () => {
         type={"frag"}
       />
       <Script
-        dangerouslySetInnerHTML={{ __html: `window.initSakura && window.initSakura();` }}
+        dangerouslySetInnerHTML={{
+          __html: `window.initSakura && window.initSakura();`,
+        }}
         id={"sakura-init"}
         strategy={"afterInteractive"}
       />
