@@ -240,7 +240,7 @@ const Home = (): ReactElement => {
                   bullets: string[];
                 }[]
               ).map((exp, i) => (
-                <div className={"resumeEntry"} key={i}>
+                <div key={i} className={"resumeEntry"}>
                   <div className={"entryTop"}>
                     <span className={"company"}>{exp.company}</span>
                     <span className={"date"}>{exp.date}</span>
@@ -268,7 +268,7 @@ const Home = (): ReactElement => {
                   bullets: string[];
                 }[]
               ).map((edu, i) => (
-                <div className={"resumeEntry"} key={i}>
+                <div key={i} className={"resumeEntry"}>
                   <div className={"entryTop"}>
                     <span className={"company"}>{edu.school}</span>
                     <span className={"date"}>{edu.date}</span>
