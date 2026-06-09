@@ -1,3 +1,3 @@
-import logger from "src/services/logger";
+import logger from "../logger";
 
 export default logger("i18n");

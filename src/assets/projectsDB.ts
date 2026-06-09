@@ -6,8 +6,15 @@ import ruckfield from "./img/ruckfield.jpg";
 import foodyril from "./img/foodyril.jpg";
 import qrcodeLib from "./img/qrcode-lib.jpg";
 import orgatrips from "./img/orgatrips.jpg";
+import sding from "./img/icons/icon-sding.png";
 
 const tabProject = [
+  {
+    title: "SDING - 2025",
+    redirection: "https://github.com/CyrilDesch/SDING",
+    image: sding,
+    typeProject: "app",
+  },
   {
     title: "Custom Qrcode Browser - 2024",
     redirection: "https://github.com/CyrilDesch/custom-qrcode-browser",

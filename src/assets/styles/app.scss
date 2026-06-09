@@ -127,6 +127,7 @@ div#presentation {
           width: 100%;
           height: 100%;
           border-radius: 100%;
+          object-fit: contain;
           filter: drop-shadow(0 0 5px #2b3e5d90);
         }
 
@@ -280,47 +281,91 @@ div#presentation {
       color: $color_3;
       text-align: center;
       font-size: 2.5em;
+
+      > span {
+        display: block;
+        color: $color_7;
+        text-align: center;
+        font-size: 1em;
+        margin-top: -10px;
+      }
     }
 
-    .valeursContainer {
+    .resumeContainer {
       width: 100%;
       margin-top: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
       padding: 0 20px;
-      gap: 20px;
     }
 
-    .valeurCard {
+    .resumeColumn {
+      > h3 {
+        font-size: 1em;
+        font-weight: 700;
+        color: $color_7;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 15px;
+      }
+    }
+
+    .resumeEntry {
       background: rgba(232, 220, 228, 0.58);
       border-radius: 16px;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
       backdrop-filter: blur(2.6px);
       -webkit-backdrop-filter: blur(2.6px);
       border: 1px solid rgba(232, 220, 228, 0.3);
-      padding: 20px;
-      width: 100%;
+      padding: 18px 20px;
+      margin-bottom: 15px;
 
-      .icon {
-        display: inline-block;
-        vertical-align: middle;
-        width: 30px;
+      .entryTop {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 3px;
+
+        .company {
+          font-weight: 700;
+          color: $color_3;
+          font-size: 1em;
+        }
+
+        .date {
+          font-size: 0.82em;
+          color: $color_7;
+          white-space: nowrap;
+          margin-left: 10px;
+        }
       }
 
-      h3 {
-        width: 100%;
-        max-width: 85%;
-        vertical-align: middle;
-        padding-left: 15px;
-        display: inline-block;
+      .role {
         color: $color_3;
-        font-size: 1.3em;
+        font-size: 0.95em;
+        font-weight: 500;
       }
 
-      p {
-        padding-top: 10px;
-        font-size: 1em;
+      .industry {
+        color: $color_7;
+        font-size: 0.85em;
+        margin-bottom: 8px;
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 6px;
+
+        li {
+          font-size: 0.9em;
+          color: $color_3;
+          padding: 2px 0;
+
+          &::before {
+            content: "○ ";
+          }
+        }
       }
     }
   }
@@ -568,6 +613,7 @@ header {
       padding-top: 0.5vw;
       color: $color_1;
       font-weight: 700;
+      white-space: nowrap;
     }
   }
   .iconUp {

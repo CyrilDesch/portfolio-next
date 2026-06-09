@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import Image from "next/image";
 import { ReactElement } from "react";
 import appIcon from "../../../assets/img/icons/icon-app.svg";

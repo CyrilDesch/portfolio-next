@@ -1,11 +1,12 @@
 {
   "home": {
-    "page_title": "Développeur Web Full Stack & Pentester Junior | Cyril Deschamps",
-    "page_description": "Cyril Deschamps, développeur web full-stack avec 2 ans d'expérience, en formation pour devenir pentester junior. Expert en développement d'applications performantes et en sécurité informatique. Basé en France, étudiant en école d'ingénieurs.",
-    "page_hide_header": "Portfolio de Cyril Deschamps - Développeur Web Full-Stack & Pentester Junior",
+    "page_title": "Ingénieur Logiciel Backend & IA Agentique | Cyril Deschamps",
+    "page_description": "Cyril Deschamps, ingénieur logiciel spécialisé en développement backend et IA agentique. Expert en Scala, TypeScript et systèmes IA avec LangChain. Expérience chez Ledger (blockchain & BigData). Disponible en CDI dès octobre 2026.",
+    "page_hide_header": "Portfolio de Cyril Deschamps - Ingénieur Logiciel Backend & IA Agentique",
     "services": {
-      "title_line1": "Services web",
-      "title_line2": "et sécurité",
+      "title_line1": "Ingénierie",
+      "title_line2": "Backend &",
+      "title_line3": "IA Agentique",
       "projects_link": "Voir mes projets"
     },
     "last_project": {
@@ -14,42 +15,38 @@
     },
     "developer": {
       "title": "Développeur",
-      "description": "En tant que développeur full-stack, qualifié en <strong>ReactJS</strong> et <strong>NodeJS</strong>, je développe des applications web performantes et évolutives."
+      "description": "En tant que développeur full-stack, qualifié en <strong>React</strong> et <strong>Scala</strong>, je développe des applications performantes et évolutives."
     },
     "software_engineering": {
       "title": "Ingénierie logicielle",
-      "description": "En tant qu'<strong>ingénieur informatique</strong>, je conçois et développe des applications en veillant aux <strong>principes de conception</strong> et des <strong>design patterns</strong>."
+      "description": "En tant qu'<strong>ingénieur logiciel</strong>, je conçois et développe des applications en veillant aux <strong>principes de conception</strong>."
     },
-    "security_audit": {
-      "title": "Audits de sécurité",
-      "description": "En tant que <strong>pentester junior</strong>, je réalise des <strong>audits de sécurité</strong> pour assurer la fiabilité et la protection des applications."
+    "agentic_ai": {
+      "title": "IA Agentique",
+      "description": "Je conçois des <strong>systèmes IA agentiques</strong> avec <strong>LangChain</strong> pour automatiser des workflows complexes et transformer des idées en spécifications actionnables."
     },
     "self_introduction": {
-      "title": "Développeur web en formation en cybersécurité axée pentesting",
-      "description": "Je suis Cyril Deschamps, étudiant en école d’ingénieurs en France, avec une forte expérience en <strong>développement web</strong> et une spécialisation en <strong>audit de sécurité</strong>. J'ai réalisé plusieurs projets web en freelance, dont une plateforme de vente intégrant un paiement sécurisé. Je me forme activement sur <strong>TryHackMe</strong> et <strong>HackTheBox</strong> pour perfectionner mes compétences en pentest (tests d'intrusion) et en sécurité offensive.<br /><strong>Mon objectif est de combiner développement et cybersécurité pour aider les entreprises à sécuriser leurs applications et infrastructures.</strong>"
+      "title": "Cyril Deschamps",
+      "description": "Spécialisé en <strong>développement backend</strong> et <strong>IA agentique</strong>. J'ai effectué un stage chez <strong>Ledger</strong> dans l'industrie blockchain &amp; BigData, où j'ai optimisé un proxy JsonRPC en streaming (×16 de capacité, −40% mémoire) et contribué à la gestion de connaissances structurées avec une approche agentique. Je développe des outils IA avec <strong>LangChain</strong> et travaille sur toute la stack avec Scala, TypeScript et React.<br /><strong>Disponible en CDI dès octobre 2026.</strong>"
     },
     "competences": {
       "title": "COMPÉTENCES",
       "subtitle": "TECHNIQUES",
-      "reactjs": {
-        "title": "ReactJS",
-        "desc": ["○ Maîtrise complète", "○ Applications web"]
-      },
-      "metasploit": {
-        "title": "Metasploit",
-        "desc": ["○ Débutant", "○ Exploitation de vulnérabilités", "○ Pentest"]
-      },
-      "burpsuite": {
-        "title": "Burp Suite",
-        "desc": ["○ Débutant", "○ Tests d'applications web", "○ Pentest"]
-      },
-      "wireshark": {
-        "title": "Wireshark",
-        "desc": ["○ Débutant", "○ Analyse du trafic réseau", "○ SOC et pentest"]
+      "scala": {
+        "title": "Scala",
+        "desc": [
+          "○ Niveau avancé",
+          "○ App backend & API REST",
+          "○ Typelevel, ZIO and KYO"
+        ]
       },
       "nodejs": {
         "title": "NodeJS",
-        "desc": ["○ Bonne maîtrise", "○ API avec ExpressJS ou NestJS"]
+        "desc": [
+          "○ Bonne maîtrise",
+          "○ API avec NestJS ou Express",
+          "○ REST & WebSocket"
+        ]
       },
       "typescript": {
         "title": "Typescript",
@@ -57,7 +54,7 @@
       },
       "java": {
         "title": "Java",
-        "desc": ["○ Niveau intermédiaire", "○ Principes SOLID"]
+        "desc": ["○ Niveau intermédiaire", "○ Principes SOLID", "○ Backend JVM"]
       },
       "git": {
         "title": "Git",
@@ -72,32 +69,69 @@
         "desc": [
           "○ Niveau intermédiaire",
           "○ Automatisation CI/CD",
-          "○ CD : Docker et Nginx sur VPS"
+          "○ Docker & Kubernetes"
         ]
       },
-      "angular": {
-        "title": "Angular",
-        "desc": ["○ Niveau intermédiaire", "○ Applications web"]
+      "reactjs": {
+        "title": "ReactJS",
+        "desc": ["○ Maîtrise complète", "○ Applications web"]
       }
     },
-    "values_section": {
-      "title": "MES VALEURS",
-      "continuous_learning": {
-        "title": "Formation continue et passion pour l'apprentissage",
-        "paragraph": "Passionné par le développement web full-stack et la cybersécurité offensive, je veille à toujours rester à jour en me formant sur des plateformes comme TryHackMe et HackTheBox, afin de renforcer mes compétences en sécurité offensive. La veille technologique est une priorité, et créer un réseau avec des experts dans divers domaines informatiques m’a beaucoup enrichi."
-      },
-      "collaboration_adaptability": {
-        "title": "Collaboration et adaptabilité",
-        "paragraph": "Grâce à mes expériences en freelance, j'ai compris l'importance d'une gestion de projet efficace et d'une communication fluide. Je m'efforce d'apporter des solutions concrètes et adaptées aux besoins spécifiques de chaque client, tout en accordant une attention particulière à la clarté des spécifications visuelles pour une meilleure compréhension des projets."
-      },
-      "curiosity_perseverance": {
-        "title": "Curiosité et persévérance",
-        "paragraph": "Que ce soit en développement web full-stack ou en cybersécurité offensive, je suis déterminé à identifier les vulnérabilités et à proposer des solutions robustes qui protègent les applications et infrastructures. Ma curiosité, moteur de mon apprentissage, me permet de m'adapter rapidement à de nouveaux environnements et constitue un atout majeur dans mes activités de pentesting (tests d'intrusion)."
-      },
-      "quality_security": {
-        "title": "Engagement pour la qualité et la sécurité",
-        "paragraph": "Je m'efforce de proposer des solutions sécurisées et performantes, tout en respectant rigoureusement les meilleures pratiques en matière de développement et d'ingénierie logicielle. Le passage par une phase de conception et de design est essentiel."
-      }
+    "resume": {
+      "title": "PARCOURS",
+      "subtitle": "FORMATION & EXPÉRIENCE",
+      "experience_label": "Expériences",
+      "education_label": "Formation",
+      "experiences": [
+        {
+          "company": "Ledger",
+          "industry": "Blockchain & BigData",
+          "role": "Ingénieur Logiciel — Stage",
+          "date": "2025",
+          "bullets": [
+            "Proxy JsonRPC streaming : ×16 capacité utilisateur, −40% mémoire",
+            "Ajout du support WebSocket au proxy",
+            "Moteur de validation de cohérence des données OLAP",
+            "Contribution IA agentique pour gestion de connaissances"
+          ]
+        },
+        {
+          "company": "Innoflair",
+          "industry": "Industrie spatiale",
+          "role": "Ingénieur Logiciel — Stage",
+          "date": "2024",
+          "bullets": ["Refonte complète de l'application de gestion de tests"]
+        },
+        {
+          "company": "Cyril Deschamps · SimplX · Pluricité",
+          "industry": "Web & Mobile",
+          "role": "Développeur Fullstack Freelance",
+          "date": "2022 – 2024",
+          "bullets": [
+            "SDING — outil IA agentique avec LangChain (SCAMPER, IBM Design Thinking)",
+            "SimplX — app cross-platform déployée sur Android & iOS pour 100+ employés",
+            "Pluricité — jeu multijoueur temps réel Top Ten Pro via WebSockets"
+          ]
+        }
+      ],
+      "education": [
+        {
+          "school": "Polytech Montpellier",
+          "degree": "Diplôme d'ingénieur",
+          "field": "Data Science, Management & Software Architecture",
+          "date": "2022 – 2026",
+          "bullets": [
+            "Spécialisation développement logiciel et conduite de projet"
+          ]
+        },
+        {
+          "school": "Univ. Claude Bernard Lyon 1",
+          "degree": "DUT Informatique",
+          "field": "",
+          "date": "2020 – 2022",
+          "bullets": ["Formation généraliste en informatique"]
+        }
+      ]
     }
   }
 }
