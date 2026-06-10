@@ -6,7 +6,7 @@ import ruckfield from "./img/ruckfield.jpg";
 import foodyril from "./img/foodyril.jpg";
 import qrcodeLib from "./img/qrcode-lib.jpg";
 import orgatrips from "./img/orgatrips.jpg";
-import sding from "./img/icons/icon-sding.png";
+import sding from "./img/sding.jpg";
 
 const tabProject = [
   {

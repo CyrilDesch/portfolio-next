@@ -27,7 +27,7 @@
     },
     "self_introduction": {
       "title": "Cyril Deschamps",
-      "description": "Spécialisé en <strong>développement backend</strong> et <strong>IA agentique</strong>. J'ai effectué un stage chez <strong>Ledger</strong> dans l'industrie blockchain &amp; BigData, où j'ai optimisé un proxy JsonRPC en streaming (×16 de capacité, −40% mémoire) et contribué à la gestion de connaissances structurées avec une approche agentique. Je développe des outils IA avec <strong>LangChain</strong> et travaille sur toute la stack avec Scala, TypeScript et React.<br /><strong>Disponible en CDI dès octobre 2026.</strong>"
+      "description": "Spécialisé en <strong>développement backend</strong> et <strong>IA agentique</strong>. J'ai effectué un stage chez <strong>Ledger</strong> dans l'industrie blockchain & BigData, où j'ai optimisé un proxy JsonRPC en streaming, ×16 de capacité et −40% mémoire et contribué à la gestion de connaissances structurées avec une approche agentique. Je développe des outils IA avec <strong>LangChain</strong> et travaille sur toute la stack avec Scala, TypeScript et React.<br /><strong>Disponible en CDI dès octobre 2026.</strong>"
     },
     "competences": {
       "title": "COMPÉTENCES",
