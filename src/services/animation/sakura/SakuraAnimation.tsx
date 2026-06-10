@@ -6,7 +6,7 @@ import React from "react";
 const SakuraCanvas: React.FC = () => {
   return (
     <>
-      <canvas className={"w-[100vw] h-[100vh] fixed t-0 l-0"} id={"sakura"} />
+      <canvas className={"w-screen h-screen fixed t-0 l-0"} id={"sakura"} />
       <Script
         dangerouslySetInnerHTML={{
           __html: `// Utilities
@@ -441,27 +441,31 @@ const SakuraCanvas: React.FC = () => {
       }
     }
 
+    // Hoisted out of the per-frame render loop to avoid re-allocating
+    // closures/arrays 60 times a second (reduces GC pressure).
+    var PI2 = Math.PI * 2.0;
+    function repeatPos(prt, cmp, limit) {
+      if (Math.abs(prt.position[cmp]) - prt.size * 0.5 > limit) {
+        //out of area
+        if (prt.position[cmp] > 0) {
+          prt.position[cmp] -= limit * 2.0;
+        } else {
+          prt.position[cmp] += limit * 2.0;
+        }
+      }
+    }
+    function repeatEuler(prt, cmp) {
+      prt.euler[cmp] = prt.euler[cmp] % PI2;
+      if (prt.euler[cmp] < 0.0) {
+        prt.euler[cmp] += PI2;
+      }
+    }
+    function zkeySort(p0, p1) {
+      return p0.zkey - p1.zkey;
+    }
+
     function renderPointFlowers() {
       //update
-      var PI2 = Math.PI * 2.0;
-      var limit = [pointFlower.area.x, pointFlower.area.y, pointFlower.area.z];
-      var repeatPos = function (prt, cmp, limit) {
-        if (Math.abs(prt.position[cmp]) - prt.size * 0.5 > limit) {
-          //out of area
-          if (prt.position[cmp] > 0) {
-            prt.position[cmp] -= limit * 2.0;
-          } else {
-            prt.position[cmp] += limit * 2.0;
-          }
-        }
-      };
-      var repeatEuler = function (prt, cmp) {
-        prt.euler[cmp] = prt.euler[cmp] % PI2;
-        if (prt.euler[cmp] < 0.0) {
-          prt.euler[cmp] += PI2;
-        }
-      };
-
       for (var i = 0; i < pointFlower.numFlowers; i++) {
         var prtcl = pointFlower.particles[i];
         prtcl.update(timeInfo.delta, timeInfo.elapsed);
@@ -482,9 +486,7 @@ const SakuraCanvas: React.FC = () => {
       }
 
       // sort
-      pointFlower.particles.sort(function (p0, p1) {
-        return p0.zkey - p1.zkey;
-      });
+      pointFlower.particles.sort(zkeySort);
 
       // update data
       var ipos = pointFlower.positionArrayOffset;
@@ -520,7 +522,9 @@ const SakuraCanvas: React.FC = () => {
       gl.uniform3fv(prog.uniforms.uFade, Vector3.arrayForm(pointFlower.fader));
 
       gl.bindBuffer(gl.ARRAY_BUFFER, pointFlower.buffer);
-      gl.bufferData(gl.ARRAY_BUFFER, pointFlower.dataArray, gl.DYNAMIC_DRAW);
+      // Buffer store is already allocated at init time (see createPointFlowers),
+      // so update it in place instead of re-allocating it every frame.
+      gl.bufferSubData(gl.ARRAY_BUFFER, 0, pointFlower.dataArray);
 
       gl.vertexAttribPointer(
         prog.attributes.aPosition,
@@ -728,16 +732,17 @@ const SakuraCanvas: React.FC = () => {
       //console.log("init post process");
     }
 
+    function bindRT(rt, isclear) {
+      gl.bindFramebuffer(gl.FRAMEBUFFER, rt.frameBuffer);
+      gl.viewport(0, 0, rt.width, rt.height);
+      if (isclear) {
+        gl.clearColor(0, 0, 0, 0);
+        gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+      }
+    }
+
     function renderPostProcess() {
       gl.disable(gl.DEPTH_TEST);
-      var bindRT = function (rt, isclear) {
-        gl.bindFramebuffer(gl.FRAMEBUFFER, rt.frameBuffer);
-        gl.viewport(0, 0, rt.width, rt.height);
-        if (isclear) {
-          gl.clearColor(0, 0, 0, 0);
-          gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-        }
-      };
 
       //make bright buff
       bindRT(renderSpec.wHalfRT0, true);
@@ -866,8 +871,8 @@ const SakuraCanvas: React.FC = () => {
         renderSpec[rtname] = createRenderTarget(rtw, rth);
       };
       rtfunc("mainRT", renderSpec.width, renderSpec.height);
-      rtfunc("wFullRT0", renderSpec.width, renderSpec.height);
-      rtfunc("wFullRT1", renderSpec.width, renderSpec.height);
+      // wFullRT0 / wFullRT1 were allocated here but never read by any pass,
+      // so they only wasted GPU memory; the bloom uses the half-res targets.
       rtfunc("wHalfRT0", renderSpec.halfWidth, renderSpec.halfHeight);
       rtfunc("wHalfRT1", renderSpec.halfWidth, renderSpec.halfHeight);
     }
@@ -890,7 +895,8 @@ const SakuraCanvas: React.FC = () => {
     }
 
     function animate() {
-      var curdate = new Date();
+      // performance.now() avoids allocating a Date object on every frame.
+      var curdate = performance.now();
       timeInfo.elapsed = (curdate - timeInfo.start) / 1000.0;
       timeInfo.delta = (curdate - timeInfo.prev) / 1000.0;
       timeInfo.prev = curdate;
@@ -921,7 +927,7 @@ const SakuraCanvas: React.FC = () => {
       createScene();
       initScene();
 
-      timeInfo.start = new Date();
+      timeInfo.start = performance.now();
       timeInfo.prev = timeInfo.start;
       animate();
     };
@@ -1098,11 +1104,13 @@ const SakuraCanvas: React.FC = () => {
 
         if(r > rstop) discard;
 
-        vec3 col = mix(vec3(1.0, 0.8, 0.75), vec3(1.0, 0.9, 0.87), r);
+        // Coeur rose plus saturé -> bord crème, pour plus de profondeur
+        vec3 col = mix(vec3(1.0, 0.62, 0.72), vec3(1.0, 0.91, 0.89), r);
         float grady = mix(0.0, 1.0, pow(coord.y * 0.5 + 0.5, 0.35));
         col *= vec3(1.0, grady, grady);
         col *= mix(0.8, 1.0, pow(abs(coord.x), 0.3));
-        col = col * diffuse + specular;
+        // Specular légèrement rosé plutôt que blanc pur
+        col = col * diffuse + specular * vec3(1.0, 0.92, 0.95);
 
         col = mix(fadeCol, col, distancefade);
 
@@ -1148,11 +1156,21 @@ const SakuraCanvas: React.FC = () => {
     varying vec2 screenCoord;
 
     void main(void) {
-        vec3 col;
-        float c;
+        // Dégradé de ciel crépusculaire : indigo profond en bas -> mauve doux en haut
+        vec3 skyBottom = vec3(0.015, 0.008, 0.05);
+        vec3 skyTop = vec3(0.11, 0.06, 0.20);
+        vec3 col = mix(skyBottom, skyTop, pow(texCoord.y, 0.75));
+
+        // Lueur douce et chaude (lune/aube) en haut à droite
         vec2 tmpv = texCoord * vec2(0.8, 1.0) - vec2(0.95, 1.0);
-        c = exp(-pow(length(tmpv) * 1.8, 2.0));
-        col = mix(vec3(0.02, 0.0, 0.03), vec3(0.96, 0.98, 1.0) * 1.5, c);
+        float c = exp(-pow(length(tmpv) * 1.8, 2.0));
+        vec3 glowCol = vec3(1.0, 0.86, 0.92) * 1.5;
+        col = mix(col, glowCol, c);
+
+        // Voile rosé diffus près de la source lumineuse pour réchauffer l'ensemble
+        float warm = exp(-pow(length(tmpv) * 0.7, 2.0)) * 0.25;
+        col += vec3(0.20, 0.06, 0.10) * warm;
+
         gl_FragColor = vec4(col * 0.5, 1.0);
     }`,
         }}
@@ -1256,7 +1274,7 @@ const SakuraCanvas: React.FC = () => {
     varying vec2 screenCoord;
     void main(void) {
         vec4 srccol = texture2D(uSrc, texCoord) * 2.0;
-        vec4 bloomcol = texture2D(uBloom, texCoord);
+        vec4 bloomcol = texture2D(uBloom, texCoord) * 1.35;
         vec4 col;
         col = srccol + bloomcol * (vec4(1.0) + srccol);
         col *= smoothstep(1.0, 0.0, pow(length((texCoord - vec2(0.5)) * 2.0), 1.2) * 0.5);

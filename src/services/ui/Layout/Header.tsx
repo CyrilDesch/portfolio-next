@@ -108,19 +108,20 @@ const Header = (): ReactElement => {
         </div>
         <span className="code">
           <p>{`object CyrilDeschamps {`}</p>
-          <p>{`   val job = "${t("header.job")}"`}</p>
-          <p>{`   val cible = "${t("header.newJob")}"`}</p>
-          <p>{`   if (year == 2026)`}</p>
-          <p>{`      // TODO :`}</p>
+          <p>{`   val job   = "${t("header.job")}"`}</p>
+          <p>{`   val date = 1 Oct 2026`}</p>
+          <p>{`   def achieveGoal =`}</p>
+          <p>{`      if (today == date)`}</p>
+          <p>{`         // TODO :`}</p>
           <p>
-            {"      "}
+            {"         "}
             <span className="txt-rotate" data-period="2000" />
           </p>
           <p>{`}`}</p>
         </span>
       </div>
       <div className={"right"}>
-        <p className={"text"}>UNDEFINED</p>
+        <p className={"text"}>LOCALHOST</p>
       </div>
       {isScrolled ? (
         <Image

@@ -4,9 +4,9 @@
     "page_description": "Cyril Deschamps, software engineer specialised in backend development and agentic AI. Expert in Scala, TypeScript, and LangChain-based AI systems. Experience at Ledger (blockchain & BigData). Available for permanent position from October 2026.",
     "page_hide_header": "Portfolio of Cyril Deschamps - Software Engineer Backend & Agentic AI",
     "services": {
-      "title_line1": "Software engineering,",
-      "title_line2": "Backend",
-      "title_line3": "& Agentic AI",
+      "title_line1": "Backend",
+      "title_line2": "& Agentic AI",
+      "title_line3": "Engineering",
       "projects_link": "View my projects"
     },
     "last_project": {
@@ -27,7 +27,7 @@
     },
     "self_introduction": {
       "title": "Software Engineer · Backend & Agentic AI",
-      "description": "I am Cyril Deschamps, a software engineering student at Polytech Montpellier, specialised in <strong>backend development</strong> and <strong>agentic AI</strong>. I interned at <strong>Ledger</strong> in the blockchain &amp; BigData industry, where I optimised a JsonRPC streaming proxy (×16 user capacity, −40% memory) and contributed to structured knowledge management with an agentic approach. I build AI-powered tools using <strong>LangChain</strong> and work across the full stack with Scala, TypeScript, and React.<br /><strong>Available for a permanent position from October 2026.</strong>"
+      "description": "I am Cyril Deschamps, a software engineering student at Polytech Montpellier, specialised in <strong>backend development</strong> and <strong>agentic AI</strong>. I interned at <strong>Ledger</strong> in the blockchain & BigData industry, where I optimised a JsonRPC streaming proxy, ×16 user capacity and −40% memory and contributed to structured knowledge management with an agentic approach. I build AI-powered tools using <strong>LangChain</strong> and work across the full stack with Scala, TypeScript, and React.<br /><strong>Available for a permanent position from October 2026.</strong>"
     },
     "competences": {
       "title": "SKILLS",

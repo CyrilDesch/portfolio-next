@@ -14,7 +14,7 @@ const Page404 = (): ReactElement => {
         className={"flex flex-col items-center justify-center py-40"}
         style={{
           background:
-            "linear-gradient(36deg, rgb(220, 199, 204) 0%, rgb(55, 47, 61) 100%)",
+            "linear-gradient(36deg, rgb(249, 204, 216) 0%, rgb(31, 19, 56) 100%)",
         }}
       >
         <div className={"text-center"}>
