@@ -6,7 +6,7 @@ resources:
 - namespace.yaml
 patches:
 - path: deployment-patch.yaml
-- path: ingress-patch.yaml
+- path: httproute-patch.yaml
 images:
 - name: ghcr.io/cyrildesch/portfolio-next
   newName: ghcr.io/cyrildesch/portfolio-next
