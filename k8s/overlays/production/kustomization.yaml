@@ -10,4 +10,4 @@ patches:
 images:
 - name: ghcr.io/cyrildesch/portfolio-next
   newName: ghcr.io/cyrildesch/portfolio-next
-  newTag: sha-4e0bff0
+  newTag: sha-e306b18
