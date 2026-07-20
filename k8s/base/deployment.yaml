@@ -15,6 +15,10 @@ spec:
       labels:
         app: portfolio-next
     spec:
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
       containers:
         - name: portfolio-next
           image: ghcr.io/cyrildesch/portfolio-next-example:latest
@@ -24,6 +28,10 @@ spec:
           env:
             - name: NODE_ENV
               value: production
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
           readinessProbe:
             httpGet:
               path: /api/healthz
