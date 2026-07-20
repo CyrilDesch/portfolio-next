@@ -21,6 +21,15 @@ export async function proxy(req: NextRequest) {
         .split(";")?.[0]
         .toLowerCase() || nextI18nextConfig.i18n.defaultLocale;
 
+    // Redirecting to the default locale gets normalized back to the
+    // unprefixed path by Next.js, which would loop this redirect forever.
+    if (
+      locale === nextI18nextConfig.i18n.defaultLocale ||
+      !nextI18nextConfig.i18n.locales.includes(locale)
+    ) {
+      return;
+    }
+
     return NextResponse.redirect(
       new URL(
         `/${locale}${req.nextUrl.pathname}${req.nextUrl.search}`,
