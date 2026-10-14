@@ -21,7 +21,7 @@ const Header = (): ReactElement => {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useTxtRotate(`// ${t("header.todo")}`);
+  useTxtRotate(t("header.todo"));
   const { scrollTo, isScrolled } = useScroll();
 
   function switchLanguage() {
@@ -109,14 +109,13 @@ const Header = (): ReactElement => {
         <span className="code">
           <p>{`object CyrilDeschamps {`}</p>
           <p>{`   val job   = "${t("header.job")}"`}</p>
-          <p>{`   val date = 1 Oct 2026`}</p>
-          <p>{`   def achieveGoal =`}</p>
-          <p>{`      if (today == date)`}</p>
-          <p>{`         // TODO :`}</p>
+          <p>{`   def converge =`}</p>
           <p>
-            {"         "}
+            {`      // TODO: `}
             <span className="txt-rotate" data-period="2000" />
           </p>
+          <p>{`   def meet(someone: Person) =`}</p>
+          <p>{`      // ${t("header.meet")}`}</p>
           <p>{`}`}</p>
         </span>
       </div>

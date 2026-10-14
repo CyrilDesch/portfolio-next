@@ -100,7 +100,8 @@
           "bullets": [
             "Proxy JsonRPC streaming : ×16 capacité utilisateur, −40% mémoire",
             "Ajout du support WebSocket au proxy",
-            "Moteur de validation de cohérence des données OLAP"
+            "Moteur de validation de cohérence des données OLAP",
+            "Co-rédaction d'une proposition de gestion des connaissances assistée par IA pour les projets d'ingénierie"
           ]
         },
         {

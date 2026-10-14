@@ -96,7 +96,8 @@
           "bullets": [
             "JsonRPC streaming proxy: ×16 user capacity, −40% memory footprint",
             "Added WebSocket support to the proxy",
-            "OLAP data consistency validation engine"
+            "OLAP data consistency validation engine",
+            "Co-authored a proposal for AI-powered knowledge management across engineering projects"
           ]
         },
         {
