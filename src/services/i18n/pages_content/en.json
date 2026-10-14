@@ -1,7 +1,7 @@
 {
   "home": {
     "page_title": "Software Engineer Backend & Agentic AI | Cyril Deschamps",
-    "page_description": "Cyril Deschamps, software engineer specialised in backend development and agentic AI. Expert in Scala, TypeScript, and LangChain-based AI systems. Experience at Ledger (blockchain & BigData). Available for permanent position from October 2026.",
+    "page_description": "Cyril Deschamps, software engineer specialised in backend development and agentic AI. Expert in Scala, TypeScript, and LangChain-based AI systems. Software engineer at Ledger (blockchain).",
     "page_hide_header": "Portfolio of Cyril Deschamps - Software Engineer Backend & Agentic AI",
     "services": {
       "title_line1": "Backend",
@@ -27,7 +27,7 @@
     },
     "self_introduction": {
       "title": "Software Engineer · Backend & Agentic AI",
-      "description": "I am Cyril Deschamps, a software engineering student at Polytech Montpellier, specialised in <strong>backend development</strong> and <strong>agentic AI</strong>. I interned at <strong>Ledger</strong> in the blockchain & BigData industry, where I optimised a JsonRPC streaming proxy, ×16 user capacity and −40% memory and contributed to structured knowledge management with an agentic approach. I build AI-powered tools using <strong>LangChain</strong> and work across the full stack with Scala, TypeScript, and React.<br /><strong>Available for a permanent position from October 2026.</strong>"
+      "description": "I am Cyril Deschamps, a software engineer (Polytech Montpellier graduate) specialised in <strong>backend development</strong> and <strong>agentic AI</strong>. I work at <strong>Ledger</strong> in the blockchain industry, where I built a continuous differential testing engine and, during my internship, optimised a JsonRPC streaming proxy (×16 user capacity, −40% memory). I build AI-powered tools using <strong>LangChain</strong> and work across the full stack with Scala, TypeScript, and React.<br /><strong>Good conversations are always welcome.</strong>"
     },
     "competences": {
       "title": "SKILLS",
@@ -37,7 +37,7 @@
         "desc": [
           "○ Advanced level",
           "○ Backend & REST APIs",
-          "○ JVM ecosystem (Tapir, Quarkus)"
+          "○ Functional effects (Cats, Kyo)"
         ]
       },
       "nodejs": {
@@ -81,28 +81,36 @@
       "experiences": [
         {
           "company": "Ledger",
+          "industry": "Blockchain",
+          "role": "Software Engineer — Full-time",
+          "date": "Sept. 2026 – Present",
+          "bullets": [
+            "Continuous differential testing engine comparing APIs and alerting on diffs, used as the verification step of an automated harness loop converging toward full parity"
+          ]
+        },
+        {
+          "company": "Ledger",
           "industry": "Blockchain & BigData",
           "role": "Software Engineer — Internship",
-          "date": "2025",
+          "date": "Mar. – Aug. 2026",
           "bullets": [
             "JsonRPC streaming proxy: ×16 user capacity, −40% memory footprint",
             "Added WebSocket support to the proxy",
-            "OLAP data consistency validation engine",
-            "Agentic AI contribution for structured knowledge management"
+            "OLAP data consistency validation engine"
           ]
         },
         {
           "company": "Innoflair",
           "industry": "Space industry",
           "role": "Software Engineer — Internship",
-          "date": "2024",
+          "date": "Mar. – Aug. 2025",
           "bullets": ["Full rewrite of the test management application"]
         },
         {
           "company": "Cyril Deschamps · SimplX · Pluricité",
           "industry": "Web & Mobile",
           "role": "Fullstack Developer Freelance",
-          "date": "2022 – 2024",
+          "date": "Jul. 2021 – Jul. 2024",
           "bullets": [
             "SDING — agentic AI brainstorming tool with LangChain (SCAMPER, IBM Design Thinking)",
             "SimplX — cross-platform app on Android & iOS for 100+ employees",
@@ -115,7 +123,7 @@
           "school": "Polytech Montpellier",
           "degree": "Engineering Degree",
           "field": "Data Science, Management & Software Architecture",
-          "date": "2022 – 2026",
+          "date": "2023 – 2026",
           "bullets": [
             "Specialisation in software engineering and project management"
           ]

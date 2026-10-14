@@ -1,7 +1,7 @@
 {
   "home": {
     "page_title": "Ingénieur Logiciel Backend & IA Agentique | Cyril Deschamps",
-    "page_description": "Cyril Deschamps, ingénieur logiciel spécialisé en développement backend et IA agentique. Expert en Scala, TypeScript et systèmes IA avec LangChain. Expérience chez Ledger (blockchain & BigData). Disponible en CDI dès octobre 2026.",
+    "page_description": "Cyril Deschamps, ingénieur logiciel spécialisé en développement backend et IA agentique. Expert en Scala, TypeScript et systèmes IA avec LangChain. Ingénieur logiciel chez Ledger (blockchain).",
     "page_hide_header": "Portfolio de Cyril Deschamps - Ingénieur Logiciel Backend & IA Agentique",
     "services": {
       "title_line1": "Ingénierie",
@@ -27,7 +27,7 @@
     },
     "self_introduction": {
       "title": "Cyril Deschamps",
-      "description": "Spécialisé en <strong>développement backend</strong> et <strong>IA agentique</strong>. J'ai effectué un stage chez <strong>Ledger</strong> dans l'industrie blockchain & BigData, où j'ai optimisé un proxy JsonRPC en streaming, ×16 de capacité et −40% mémoire et contribué à la gestion de connaissances structurées avec une approche agentique. Je développe des outils IA avec <strong>LangChain</strong> et travaille sur toute la stack avec Scala, TypeScript et React.<br /><strong>Disponible en CDI dès octobre 2026.</strong>"
+      "description": "Spécialisé en <strong>développement backend</strong> et <strong>IA agentique</strong>. Je travaille chez <strong>Ledger</strong> dans l'industrie blockchain, où j'ai développé un moteur de tests différentiels continus et, durant mon stage, optimisé un proxy JsonRPC en streaming (×16 de capacité, −40% mémoire). Je développe des outils IA avec <strong>LangChain</strong> et travaille sur toute la stack avec Scala, TypeScript et React.<br /><strong>Les bonnes rencontres sont les bienvenues.</strong>"
     },
     "competences": {
       "title": "COMPÉTENCES",
@@ -37,7 +37,7 @@
         "desc": [
           "○ Niveau avancé",
           "○ App backend & API REST",
-          "○ Typelevel, ZIO and KYO"
+          "○ Effets fonctionnels (Cats, Kyo)"
         ]
       },
       "nodejs": {
@@ -85,28 +85,36 @@
       "experiences": [
         {
           "company": "Ledger",
+          "industry": "Blockchain",
+          "role": "Ingénieur Logiciel — CDI",
+          "date": "Sept. 2026 – Aujourd'hui",
+          "bullets": [
+            "Moteur de tests différentiels continus comparant des APIs et alertant sur les écarts, étape de vérification d'une boucle de harness automatisée convergeant vers la parité complète"
+          ]
+        },
+        {
+          "company": "Ledger",
           "industry": "Blockchain & BigData",
           "role": "Ingénieur Logiciel — Stage",
-          "date": "2025",
+          "date": "Mars – Août 2026",
           "bullets": [
             "Proxy JsonRPC streaming : ×16 capacité utilisateur, −40% mémoire",
             "Ajout du support WebSocket au proxy",
-            "Moteur de validation de cohérence des données OLAP",
-            "Contribution IA agentique pour gestion de connaissances"
+            "Moteur de validation de cohérence des données OLAP"
           ]
         },
         {
           "company": "Innoflair",
           "industry": "Industrie spatiale",
           "role": "Ingénieur Logiciel — Stage",
-          "date": "2024",
+          "date": "Mars – Août 2025",
           "bullets": ["Refonte complète de l'application de gestion de tests"]
         },
         {
           "company": "Cyril Deschamps · SimplX · Pluricité",
           "industry": "Web & Mobile",
           "role": "Développeur Fullstack Freelance",
-          "date": "2022 – 2024",
+          "date": "Juil. 2021 – Juil. 2024",
           "bullets": [
             "SDING — outil IA agentique avec LangChain (SCAMPER, IBM Design Thinking)",
             "SimplX — app cross-platform déployée sur Android & iOS pour 100+ employés",
@@ -119,7 +127,7 @@
           "school": "Polytech Montpellier",
           "degree": "Diplôme d'ingénieur",
           "field": "Data Science, Management & Software Architecture",
-          "date": "2022 – 2026",
+          "date": "2023 – 2026",
           "bullets": [
             "Spécialisation développement logiciel et conduite de projet"
           ]
